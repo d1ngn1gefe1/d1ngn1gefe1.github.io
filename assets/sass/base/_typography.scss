@@ -63,8 +63,6 @@
 		font-weight: _font(weight-bold);
 		line-height: 1.5;
 		margin: 0 0 (_size(element-margin) * 0.5) 0;
-		text-transform: uppercase;
-		letter-spacing: _font(letter-spacing);
 
 		a {
 			color: inherit;
@@ -86,12 +84,16 @@
 		font-size: 2.25rem;
 		line-height: 1.3;
 		letter-spacing: _font(letter-spacing-heading);
+		text-transform: uppercase;
+		letter-spacing: _font(letter-spacing);
 	}
 
 	h2 {
 		font-size: 1.5rem;
 		line-height: 1.4;
 		letter-spacing: _font(letter-spacing-heading);
+		text-transform: uppercase;
+		letter-spacing: _font(letter-spacing);
 	}
 
 	h3 {
