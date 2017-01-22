@@ -121,7 +121,7 @@
 
 	body, input, select, textarea {
 		color: #ffffff;
-		font-family: "Source Sans Pro", sans-serif;
+		font-family: "Roboto Slab", sans-serif;
 		font-weight: 300;
 		font-size: 1rem;
 		line-height: 1.65;
@@ -156,11 +156,14 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #ffffff;
-		font-weight: 600;
 		line-height: 1.5;
 		margin: 0 0 1rem 0;
-		text-transform: uppercase;
+	}
+
+	h1, h2 {
+		font-weight: 600;
 		letter-spacing: 0.2rem;
+		text-transform: uppercase;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
