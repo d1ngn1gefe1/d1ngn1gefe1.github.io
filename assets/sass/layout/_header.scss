@@ -47,18 +47,14 @@
 			}
 		}
 
-		.logo {
-			width: 5.5rem;
-			height: 5.5rem;
-			line-height: 5.5rem;
-			border: solid _size(border-width) _palette(border);
+		.profile {
+			width: 15rem;
+			height: 15rem;
+			line-height: 15rem;
+			border: solid 1px #ffffff;
 			border-radius: 100%;
-
-			.icon {
-				&:before {
-					font-size: 2rem;
-				}
-			}
+			background-image: url("../../images/profile-sm.jpg");
+			background-size: 15rem 15rem;
 		}
 
 		.content {
@@ -119,6 +115,8 @@
 						letter-spacing: _font(letter-spacing);
 						font-size: 0.8rem;
 						border-bottom: 0;
+						text-decoration: none;
+						color: inherit;
 
 						&:hover {
 							background-color: _palette(border-bg);
