@@ -1,7 +1,17 @@
+.row {
+  margin: 0px
+}
+
+.profile-bg {
+  width: 100%;
+}
+
 .paper {
-  padding: 25px;
   margin-bottom: 20px;
-  font-family: "sans-serif";
+
+  h1, h2, h3, h4, h5, h6, p {
+    font-family: "sans-serif";
+  }
 
   .paper-image {
     width: 100%;
@@ -10,7 +20,21 @@
   p {
     margin: 0;
   }
+
+  .paper-main {
+    padding: 25px;
+  }
+
+  .paper-details {
+    padding: 35px;
+    border-radius: _size(border-radius);
+    background-color: _palette(fg-light)
+  }
 }
+
+// .company-image {
+//   width
+// }
 
 ul.timeline {
 	border-left: 8px solid #FFF;
@@ -47,7 +71,7 @@ ul.timeline {
     }
 
     .data {
-    	background: #fdfdfd;
+    	// background-color: transparentize(_palette(fg), 0.5);
     	margin: 10px 0px 10px 20px;
     	border-left: 10px solid;
     	padding: 18px 20px;
@@ -58,18 +82,6 @@ ul.timeline {
     	border-radius: 3px;
 
       border-left-color: #03cc85;
-
-      .subject {
-      	cursor: pointer;
-      	color: #777;
-      	font-size: 18px;
-      }
-
-      .text {
-      	display: none;
-      	margin-top: 15px;
-      	font-size: 14px;
-      }
     }
   }
 }

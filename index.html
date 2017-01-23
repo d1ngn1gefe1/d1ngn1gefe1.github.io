@@ -10,21 +10,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-		  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
-
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-		  integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous" />
-
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-		  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
-		</script>
-
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+			integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body>
@@ -57,56 +44,199 @@
 				<div id="main">
 
 					<!-- About -->
-					<article id="about">
-						<h2 class="major">About</h2>
-					  <span class="image left"><img src="images/profile-bg.jpg" alt="" /></span>
-					  <p>I am a graduate student in Computer Science at Stanford University, specializing in Artificial
-							Intelligence. Advised by <a href="vision.stanford.edu/feifeili/">Professor Fei-Fei Li</a>, I am currently
-							researching in the <a href="vision.stanford.edu">Stanford Vision Lab</a>.
-						</p>
-						<p>I earned my bachelor's degree in Electrical and Computer Engineering at
-							<a href="illinois.edu/">University of Illinois Urbana-Champaign</a>. During my undergraduate study, I
-							worked in the Quantitative Light Imaging Laboratory with Professor Gabriel Popescu. I also did research in
-							the Computer Vision and Robotics Laboratory with
-							<a href="vision.ai.illinois.edu/ahuja.html">Professor Narendra Ahuja</a> and
-							<a href="sites.google.com/site/jbhuang0604/">Dr. Jia-Bin Huang</a>.
+					<article class="container" id="about">
+						<div class="row article-title">
+							<h2 class="major">About</h2>
+						</div>
+						<div class="row article-content">
+							<div class="col-4">
+							  <img class="profile-bg" src="images/profile-bg.jpg" alt="" />
+							</div>
+							<div class="col-8">
+							  <p>I am a graduate student in Computer Science at Stanford University, specializing in Artificial
+									Intelligence. Advised by <a href="vision.stanford.edu/feifeili/">Professor Fei-Fei Li</a>, I am
+									currently researching in the <a href="vision.stanford.edu">Stanford Vision Lab</a>.
+								</p>
+								<p>I earned my bachelor's degree in Electrical and Computer Engineering at
+									<a href="illinois.edu/">University of Illinois Urbana-Champaign</a>. During my undergraduate study, I
+									worked in the Quantitative Light Imaging Laboratory with Professor Gabriel Popescu. I also did
+									research in the Computer Vision and Robotics Laboratory with
+									<a href="vision.ai.illinois.edu/ahuja.html">Professor Narendra Ahuja</a> and
+									<a href="sites.google.com/site/jbhuang0604/">Dr. Jia-Bin Huang</a>.
+							</div>
+						</div>
 					</article>
 
 					<!-- Research -->
-					<article id="research">
-						<h2 class="major">Research</h2>
-						<div class="contrainer">
-
-							<div class="paper row">
-								<div class="col-xs-3">
-									<img class="paper-image" src="images/pub1.png">
+					<article class="container" id="research">
+						<div class="row article-title">
+							<h2 class="major">Research</h2>
+						</div>
+						<div class="article-content">
+							<div class="paper">
+								<div class="paper-main row">
+									<div class="col-3">
+										<img class="paper-image" src="images/unsupervised.png">
+									</div>
+									<div class="col-8 col-offset-1">
+										<h3 class="paper-title">Unsupervised Learning of Long-Term Motion Dynamics for Videos</h3>
+										<p><u>Z. Luo</u>, B. Peng, A. Alahi, D.-A. Huang, and L. Fei-Fei</p>
+										<p>arXiv, 2017</p>
+										<button data-toggle="collapse" data-target="#paper-details1">Abstract</button>
+									</div>
 								</div>
-								<div class="col-xs-8 col-xs-offset-1">
-									<h3 class="paper-title">Unsupervised Learning of Long-Term Motion Dynamics for Videos</h4>
-									<p><u>Z. Luo</u>, B. Peng, A. Alahi, D.-A. Huang, and L. Fei-Fei</p>
-									<p>arXiv 2017</p>
+								<p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Link with href
+  </a>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Button with data-target
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-block">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+  </div>
+</div>
+								<div class="collapse paper-details" id="paper-details1">
+									We present an unsupervised representation learning ap-
+									proach that compactly encodes the motion dependencies
+									in videos. Given a pair of images from a video clip, our
+									framework learns to predict the long-term D motions. To
+									reduce the complexity of the learning framework, we pro-
+									pose to describe the motion as a sequence of atomic D
+									flows computed with RGB-D modality. We use a Recur-
+									rent Neural Network based Encoder-Decoder framework
+									to predict these sequences of flows. We argue that in or-
+									der for the decoder to reconstruct these sequences, the en-
+									coder must learn a robust video representation that captures
+									long-term motion dependencies and spatial-temporal rela-
+									tions. We demonstrate the effectiveness of our learned tem-
+									poral representations on activity classification across multi-
+									ple modalities and datasets such as NTU RGB+D and MSR
+									Daily Activity D. Our framework is generic to any input
+									modality, i.e., RGB, Depth, and RGB-D videos.
 								</div>
 							</div>
 
 							<div class="paper row">
-								<div class="col-xs-3">
-									<img class="paper-image" src="images/pub1.png">
+								<div class="col-3">
+									<img class="paper-image" src="images/towards.gif">
 								</div>
-								<div class="col-xs-8 col-xs-offset-1">
-									<h3 class="paper-title">Towards Viewpoint Invariant 3D Human Pose Estimation</h4>
+								<div class="col-8 col-offset-1">
+									<h3 class="paper-title">Towards Viewpoint Invariant 3D Human Pose Estimation</h3>
 									<p>A. Haque, B. Peng*, <u>Z. Luo*</u>, A. Alahi, S. Yeung, and L. Fei-Fei</p>
+									<p>[* indicates equal contribution]</p>
+									<p>European Conference on Computer Vision (ECCV), 2016</p>
+									<span class="label label-primary">Abstract</span>
 								</div>
 							</div>
 
 							<div class="paper row">
-								<div class="col-xs-3">
+								<div class="col-3">
 									<img class="paper-image" src="images/pub1.png">
 								</div>
-								<div class="col-xs-8 col-xs-offset-1">
-									<h3 class="paper-title">Vision-Based Hand Hygiene Monitoring in Hospitals</h4>
-									<p>S. Yeung, A. Alahi, <u>Z. Luo</u>, B. Peng, A. Haque, S. Yeung, and L. Fei-Fei</p>
+								<div class="col-8 col-offset-1">
+									<h3 class="paper-title">Vision-Based Hand Hygiene Monitoring in Hospitals</h3>
+									<p>S. Yeung, A. Alahi, <u>Z. Luo</u>, B. Peng, A. Haque, and L. Fei-Fei</p>
+									<p>Workshop on Machine Learning in Healthcare, Neural Information Processing Systems (NIPS), 2016</p>
+									<span class="label label-primary">Abstract</span>
 								</div>
 							</div>
+
+							<div class="paper row">
+								<div class="col-3">
+									<img class="paper-image" src="images/pub1.png">
+								</div>
+								<div class="col-8 col-offset-1">
+									<h3 class="paper-title">Label-Free Tissue Scanner for Colorectal Cancer Screening</h3>
+									<p>M. E. Kandel, S. Sridharan, J. Liang, <u>Z. Luo</u>, K. Han, M. Virgilia, A. Shah, R. Patel,
+										K. Tangella, A. Kajdacsy-Balla, G. Guzman, G. Popescu</p>
+									<p>Nature Communications, Nature, 2016 (submitted)</p>
+								</div>
+							</div>
+
+							<div class="paper row">
+								<div class="col-3">
+									<img class="paper-image" src="images/pub1.png">
+								</div>
+								<div class="col-8 col-offset-1">
+									<h3 class="paper-title">Towards Quantitative Automated Histopathology of Breast Cancer using Spatial
+										Light Interference Microscopy (SLIM)</h3>
+									<p>H. Majeed, T. H. Nguyen, M. Kandel, K. Han, <u>Z. Luo</u>, V. Macias, K. Tangella, A. Balla, M. Do,
+										and G. Popescu.</p>
+									<p>United States and Canadian Academy of Pathology (USCAP), 2016</p>
+								</div>
+							</div>
+
+							<div class="paper row">
+								<div class="col-3">
+									<img class="paper-image" src="images/pub1.png">
+								</div>
+								<div class="col-8 col-offset-1">
+									<h3 class="paper-title">C++ Software Integration for a High-Throughput Phase Imaging Platform</h3>
+									<p>M. Kandel, <u>Z. Luo</u>, K. Han, and G. Popescu</p>
+									<p>SPIE Photonics West: BiOS, 2015</p>
+								</div>
+							</div>
+
+							<div class="paper row">
+								<div class="col-3">
+									<img class="paper-image" src="images/pub1.png">
+								</div>
+								<div class="col-8 col-offset-1">
+									<h3 class="paper-title">Label-Free Tissue Scanner for Colorectal Cancer Screening</h3>
+									<p>M. E. Kandel, S. Sridharan, J. Liang, <u>Z. Luo</u>, K. Han, V. Macias, A. Shah, R. Patel,
+										K. Tangella, A. K.-Balla, G. Guzman, and G. Popescu</p>
+									<p>Cancer Research, American Association for Cancer Research (AACR), 2016 (submitted)</p>
+								</div>
+							</div>
+
+							<div class="paper row">
+								<div class="col-3">
+									<img class="paper-image" src="images/pub1.png">
+								</div>
+								<div class="col-8 col-offset-1">
+									<h3 class="paper-title">Vision-Based Hand Hygiene Monitoring in Hospitals</h3>
+									<p>S. Yeung, A. Alahi, <u>Z. Luo</u>, B. Peng, A. Haque, and L. Fei-Fei</p>
+									<p>Annual Symposium, American Medical Informatics Association (AMIA), 2016</p>
+								</div>
+							</div>
+
+							<div class="paper row">
+								<div class="col-3">
+									<img class="paper-image" src="images/pub1.png">
+								</div>
+								<div class="col-8 col-offset-1">
+									<h3 class="paper-title">Breast Cancer Diagnosis using Spatial Light Interference Microscopy</h3>
+									<p>H. Majeed, M. Kandel, K. Han, <u>Z. Luo</u>, V. Macias, K. Tangella, A. Balla, and G. Popescu</p>
+									<p>Journal of Biomedical Optics (JBO), 2015</p>
+								</div>
+							</div>
+
+							<div class="paper row">
+								<div class="col-3">
+									<img class="paper-image" src="images/pub1.png">
+								</div>
+								<div class="col-8 col-offset-1">
+									<h3 class="paper-title">High Throughput Imaging of Blood Smears using White Light Diffraction Phase
+										Microscopy</h3>
+									<p>H. Majeed, M. Kandel, B. Bhadhuri, K. Han, <u>Z. Luo</u>, K. Tangella, and G. Popescu</p>
+									<p>Photonics West: BiOS, 2015</p>
+								</div>
+							</div>
+
+							<div class="paper row">
+								<div class="col-3">
+									<img class="paper-image" src="images/pub1.png">
+								</div>
+								<div class="col-8 col-offset-1">
+									<h3 class="paper-title">Diagnosis of Breast Cancer Biopsies using Quantitative Phase Imaging</h3>
+									<p>H. Majeed, M. Kandel, K. Han, <u>Z. Luo</u>, V. Macias, K. Tangella, A. Balla, and G. Popescu</p>
+									<p>Photonics West: BiOS, 2015</p>
+								</div>
+							</div>
+
 						</div>
 					</article>
 
@@ -147,7 +277,10 @@
 								<div class="date">Summer 2016</div>
 								<div class="circle"></div>
 								<div class="data">
-									<div class="subject">Amazon A9</div>
+									<img class="company-image" src="images/a9.jpeg"></img>
+									<div>
+										Amazon A9
+									</div>
 								</div>
 							</li>
 							<li>
@@ -417,10 +550,18 @@
 		<div id="bg"></div>
 
 		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+		  integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous">
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+		  integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous">
+		</script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+		  integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous">
+		</script>
+
 		<script src="assets/js/skel.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
-
 	</body>
 </html>
