@@ -21,22 +21,26 @@ of those sections to manage the look and feel of the site. */
 .intro-section {
   height: 100%;
   padding-top: 100px;
+  padding-bottom: 30px;
   text-align: center;
   background: #fff; }
 
 .about-section {
   padding-top: 100px;
+  padding-bottom: 30px;
   text-align: center;
   background: #eee; }
 
 .services-section {
   padding-top: 100px;
+  padding-bottom: 30px;
   text-align: center;
   background: #fff; }
 
 .contact-section {
   height: 100%;
   padding-top: 100px;
+  padding-bottom: 30px;
   text-align: center;
   background: #eee; }
 
@@ -44,9 +48,15 @@ of those sections to manage the look and feel of the site. */
   margin-bottom: 30px; }
 
 .paper {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  display: table;
+  width: 100%; }
   .paper .paper-fig {
     width: 200px; }
+  .paper div[class^="col-"] {
+    display: table-cell;
+    float: none;
+    vertical-align: middle; }
 
 .school-fig {
   width: 150px; }

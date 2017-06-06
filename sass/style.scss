@@ -28,6 +28,7 @@ of those sections to manage the look and feel of the site. */
 .intro-section {
   height: 100%;
   padding-top: 100px;
+  padding-bottom: 30px;
   text-align: center;
   background: #fff;
 }
@@ -35,6 +36,7 @@ of those sections to manage the look and feel of the site. */
 .about-section {
   //height: 100%;
   padding-top: 100px;
+  padding-bottom: 30px;
   text-align: center;
   background: #eee;
 }
@@ -42,6 +44,7 @@ of those sections to manage the look and feel of the site. */
 .services-section {
   //height: 100%;
   padding-top: 100px;
+  padding-bottom: 30px;
   text-align: center;
   background: #fff;
 }
@@ -49,6 +52,7 @@ of those sections to manage the look and feel of the site. */
 .contact-section {
   height: 100%;
   padding-top: 100px;
+  padding-bottom: 30px;
   text-align: center;
   background: #eee;
 }
@@ -62,6 +66,14 @@ of those sections to manage the look and feel of the site. */
 
   .paper-fig {
     width: 200px;
+  }
+
+  display: table;
+  width: 100%;
+  div[class^="col-"] {
+    display: table-cell;
+    float: none;
+    vertical-align: middle;
   }
 }
 
