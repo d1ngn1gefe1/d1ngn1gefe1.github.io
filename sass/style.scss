@@ -27,10 +27,31 @@ of those sections to manage the look and feel of the site. */
 
 .intro-section {
   height: 100%;
-  padding-top: 100px;
+  padding-top: 150px;
   padding-bottom: 30px;
   text-align: center;
-  background: #fff;
+
+  background: url("../intro/bg.png") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  h1 {
+    color: white;
+  }
+
+  p {
+    color: white;
+  }
+
+  a {
+    color: white;
+  }
+
+  .my-info {
+    background-color: rgba(0, 0, 0, .7);
+  }
 }
 
 .about-section {
@@ -50,7 +71,7 @@ of those sections to manage the look and feel of the site. */
 }
 
 .contact-section {
-  height: 100%;
+  //height: 100%;
   padding-top: 100px;
   padding-bottom: 30px;
   text-align: center;
@@ -64,17 +85,21 @@ of those sections to manage the look and feel of the site. */
 .paper {
   margin-bottom: 30px;
 
-  .paper-fig {
-    width: 200px;
-  }
+  //.paper-fig {
+  //  width: 200px;
+  //}
 
-  display: table;
-  width: 100%;
-  div[class^="col-"] {
-    display: table-cell;
-    float: none;
-    vertical-align: middle;
-  }
+  //display: table;
+  //width: 100%;
+  //div[class^="col-"] {
+  //  display: table-cell;
+  //  float: none;
+  //  vertical-align: middle;
+  //}
+}
+
+.profile-fig {
+  width: 150px;
 }
 
 .school-fig {

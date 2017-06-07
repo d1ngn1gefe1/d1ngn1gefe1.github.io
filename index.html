@@ -63,12 +63,13 @@ scrollspy function -->
 <section id="intro" class="intro-section">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12">
-        <h1 class="subtitle">Scrolling Nav</h1>
-        <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>,
-          and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give
-          the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p>
-        <a class="btn btn-default page-scroll" href="#about">Click Me to Scroll Down!</a>
+      <div class="col-sm-4 col-sm-offset-4 my-info">
+        <h1>Alan Zelun Luo</h1>
+        <p>Graduate Student<br>Computer Science Department<br>Stanford University<br>zelunluo at stanford dot edu</p>
+        <p>
+          <a href="https://scholar.google.com/citations?user=y90O9pUAAAAJ&hl=en">[Google Scholar]</a>
+          <a href="">[CV]</a>
+        </p>
       </div>
     </div>
   </div>
@@ -82,9 +83,9 @@ scrollspy function -->
     </div>
 
     <div class="row">
-      <div class="col-lg-8">
+      <div class="col-sm-8">
         <h3 class="text-left">Education</h3>
-        <div class="col-lg-6">
+        <div class="col-sm-6">
           <img src="about/stanford_seal.png" class="school-fig">
           <p>Master of Science<br>
             Computer Science<br>
@@ -92,7 +93,7 @@ scrollspy function -->
             2015-Present
           </p>
         </div>
-        <div class="col-lg-6">
+        <div class="col-sm-6">
           <img src="about/uiuc_seal.png" class="school-fig">
           <p>Bachelor of Science<br>
             Electrical and Computer Engineering<br>
@@ -104,23 +105,23 @@ scrollspy function -->
     </div>
 
     <div class="row">
-      <div class="col-lg-8">
+      <div class="col-sm-8">
         <h3 class="text-left">Industry</h3>
-        <div class="col-lg-4">
+        <div class="col-sm-4">
           <img src="about/google.png" class="company-fig img-circle">
           <p>Google<br>
             Research Intern<br>
             June 2017-September 2017
           </p>
         </div>
-        <div class="col-lg-4">
+        <div class="col-sm-4">
           <img src="about/a9.png" class="company-fig img-circle">
           <p>Amazon A9<br>
             Research Intern<br>
             June 2016-September 2016
           </p>
         </div>
-        <div class="col-lg-4">
+        <div class="col-sm-4">
           <img src="about/yahoo.png" class="company-fig img-circle">
           <p>Yahoo<br>
             Software Engineering Intern<br>
@@ -151,142 +152,150 @@ scrollspy function -->
       <h1 class="subtitle">Publications</h1>
     </div>
 
-    <div class="row paper">
-      <div class="col-lg-3">
-        <img src="publications/luo2017label.png" class="paper-fig">
+    <div class="row">
+      <h3 class="text-left">Computer Vision</h3>
+
+      <div class="row paper">
+        <div class="col-sm-3">
+          <img src="publications/luo2017label.png" class="paper-fig img-responsive">
+        </div>
+        <div class="col-sm-8 col-sm-offset-1">
+          <h4 class="paper-title text-left">Label-Efficient Learning of Transferable Representations across Domains and Tasks</h4>
+          <p class="text-left"><strong>Zelun Luo</strong>, Yuliang Zou, Judy Hoffman, Li Fei-Fei</p>
+          <p class="text-left">NIPS 2017 submission</p>
+          <p class="text-left">[pdf] [code] [website]</p>
+        </div>
       </div>
-      <div class="col-lg-8 col-lg-offset-1">
-        <h4 class="paper-title text-left">Label-Efficient Learning of Transferable Representations across Domains and Tasks</h4>
-        <p class="text-left"><strong>Zelun Luo</strong>, Yuliang Zou, Judy Hoffman, Li Fei-Fei</p>
-        <p class="text-left">NIPS 2017 submission</p>
-        <p class="text-left">[pdf] [code] [website]</p>
+
+      <div class="row paper">
+        <div class="col-sm-3">
+          <img src="publications/luo2017unsupervised.png" class="paper-fig img-responsive">
+        </div>
+        <div class="col-sm-8 col-sm-offset-1">
+          <h4 class="paper-title text-left">Unsupervised Learning of Long-Term Motion Dynamics for Videos</h4>
+          <p class="text-left"><strong>Zelun Luo</strong>, Boya Peng, De-An Huang, Alexandre Alahi, Li Fei-Fei</p>
+          <p class="text-left">CVPR 2017</p>
+          <p class="text-left">[pdf] [code] [website]</p>
+        </div>
+      </div>
+
+      <div class="row paper">
+        <div class="col-sm-3">
+          <img src="publications/haque2016towards.gif" class="paper-fig img-responsive">
+        </div>
+        <div class="col-sm-8 col-sm-offset-1">
+          <h4 class="paper-title text-left">Towards Viewpoint Invariant 3D Human Pose Estimation</h4>
+          <p class="text-left">Albert Haque, <strong>Zelun Luo*</strong>, Boya Peng*, Alexandre Alahi, Serena Yeung, Li Fei-Fei</p>
+          <p class="text-left">ECCV 2016</p>
+          <p class="text-left">[pdf] [code] [website]</p>
+        </div>
       </div>
     </div>
 
-    <div class="row paper">
-      <div class="col-lg-3">
-        <img src="publications/luo2017unsupervised.png" class="paper-fig">
-      </div>
-      <div class="col-lg-8 col-lg-offset-1">
-        <h4 class="paper-title text-left">Unsupervised Learning of Long-Term Motion Dynamics for Videos</h4>
-        <p class="text-left"><strong>Zelun Luo</strong>, Boya Peng, De-An Huang, Alexandre Alahi, Li Fei-Fei</p>
-        <p class="text-left">CVPR 2017</p>
-        <p class="text-left">[pdf] [code] [website]</p>
-      </div>
-    </div>
+    <div>
+      <h3 class="text-left">AI-Assisted Healthcare</h3>
 
-    <div class="row paper">
-      <div class="col-lg-3">
-        <img src="publications/haque2016towards.gif" class="paper-fig">
+      <div class="row paper">
+        <div class="col-sm-3">
+          <img src="publications/kandel2017label.png" class="paper-fig img-responsive">
+        </div>
+        <div class="col-sm-8 col-sm-offset-1">
+          <h4 class="paper-title text-left">Label-Free Tissue Scanner for Colorectal Cancer Screening</h4>
+          <p class="text-left">Mikhail E. Kandel, Shamira Sridharan, Jon Liang, <strong>Zelun Luo</strong>, Kevin Han, Virgilia Macias, Anish Shah,
+            Roshan Patel, Krishnarao Tangella, Andre Kajdacsy-Balla, Grace Guzman, Gabriel Popescu</p>
+          <p class="text-left">Journal of Biomedical Optics 2017</p>
+          <p class="text-left">[pdf] [code] [website]</p>
+        </div>
       </div>
-      <div class="col-lg-8 col-lg-offset-1">
-        <h4 class="paper-title text-left">Towards Viewpoint Invariant 3D Human Pose Estimation</h4>
-        <p class="text-left">Albert Haque, <strong>Zelun Luo*</strong>, Boya Peng*, Alexandre Alahi, Serena Yeung, Li Fei-Fei</p>
-        <p class="text-left">ECCV 2016</p>
-        <p class="text-left">[pdf] [code] [website]</p>
-      </div>
-    </div>
 
-    <div class="row paper">
-      <div class="col-lg-3">
-        <img src="publications/kandel2017label.png" class="paper-fig">
+      <div class="row paper">
+        <div class="col-sm-3">
+          <img src="publications/luo2017computer.png" class="paper-fig img-responsive">
+        </div>
+        <div class="col-sm-8 col-sm-offset-1">
+          <h4 class="paper-title text-left">Vision-based Approach to Senior Healthcare: Convolutional Neural Networks for Five Clinical States</h4>
+          <p class="text-left"><strong>Zelun Luo</strong>, Alisha Rege, Guido Pusiol, Arnold Milstein, Li Fei-Fei, N. Lance Downing</p>
+          <p class="text-left">American Medical Informatics Association (AMIA) 2017 submission</p>
+          <p class="text-left">[pdf] [code] [website]</p>
+        </div>
       </div>
-      <div class="col-lg-8 col-lg-offset-1">
-        <h4 class="paper-title text-left">Label-Free Tissue Scanner for Colorectal Cancer Screening</h4>
-        <p class="text-left">Mikhail E. Kandel, Shamira Sridharan, Jon Liang, <strong>Zelun Luo</strong>, Kevin Han, Virgilia Macias, Anish Shah,
-          Roshan Patel, Krishnarao Tangella, Andre Kajdacsy-Balla, Grace Guzman, Gabriel Popescu</p>
-        <p class="text-left">Journal of Biomedical Optics 2017</p>
-        <p class="text-left">[pdf] [code] [website]</p>
-      </div>
-    </div>
 
-    <div class="row paper">
-      <div class="col-lg-3">
-        <img src="publications/luo2017computer.png" class="paper-fig">
+      <div class="row paper">
+        <div class="col-sm-3">
+          <img src="publications/majeed2016towards.png" class="paper-fig img-responsive">
+        </div>
+        <div class="col-sm-8 col-sm-offset-1">
+          <h4 class="paper-title text-left">Towards Quantitative Automated Histopathology of Breast Cancer using Spatial Light Interference Microscopy
+            (SLIM)</h4>
+          <p class="text-left">Hassaan Majeed, Tan H Nguyen, Mikhail E Kandel, Kevin Han, <strong>Zelun Luo</strong>, Virgilia Macias,
+            Krishnarao Tangella, Andre Balla, Minh N Do, Gabriel Popescu</p>
+          <p class="text-left">United States and Canadian Academy of Pathology (USCAP) 2016</p>
+          <p class="text-left">[pdf] [code] [website]</p>
+        </div>
       </div>
-      <div class="col-lg-8 col-lg-offset-1">
-        <h4 class="paper-title text-left">Vision-based Approach to Senior Healthcare: Convolutional Neural Networks for Five Clinical States</h4>
-        <p class="text-left"><strong>Zelun Luo</strong>, Alisha Rege, Guido Pusiol, Arnold Milstein, Li Fei-Fei, N. Lance Downing</p>
-        <p class="text-left">American Medical Informatics Association (AMIA) 2017 submission</p>
-        <p class="text-left">[pdf] [code] [website]</p>
-      </div>
-    </div>
 
-    <div class="row paper">
-      <div class="col-lg-3">
-        <img src="publications/majeed2016towards.png" class="paper-fig">
+      <div class="row paper">
+        <div class="col-sm-3">
+          <img src="publications/yeung2015vision.png" class="paper-fig img-responsive">
+        </div>
+        <div class="col-sm-8 col-sm-offset-1">
+          <h4 class="paper-title text-left">Vision-Based Hand Hygiene Monitoring in Hospitals</h4>
+          <p class="text-left">Serena Yeung, Alexandre Alahi, <strong>Zelun Luo</strong>, Boya Peng, Albert Haque, Amit Singh, Terry Platchek,
+            Arnold Milstein, Li Fei-Fei</p>
+          <p class="text-left">NIPS 2015 Machine Learning for Health Care Workshop</p>
+          <p class="text-left">[pdf] [code] [website]</p>
+        </div>
       </div>
-      <div class="col-lg-8 col-lg-offset-1">
-        <h4 class="paper-title text-left">Towards Quantitative Automated Histopathology of Breast Cancer using Spatial Light Interference Microscopy
-          (SLIM)</h4>
-        <p class="text-left">Hassaan Majeed, Tan H Nguyen, Mikhail E Kandel, Kevin Han, <strong>Zelun Luo</strong>, Virgilia Macias,
-          Krishnarao Tangella, Andre Balla, Minh N Do, Gabriel Popescu</p>
-        <p class="text-left">United States and Canadian Academy of Pathology (USCAP) 2016</p>
-        <p class="text-left">[pdf] [code] [website]</p>
-      </div>
-    </div>
 
-    <div class="row paper">
-      <div class="col-lg-3">
-        <img src="publications/yeung2015vision.png" class="paper-fig">
+      <div class="row paper">
+        <div class="col-sm-3">
+          <img src="publications/majeed2015breast.png" class="paper-fig img-responsive">
+        </div>
+        <div class="col-sm-8 col-sm-offset-1">
+          <h4 class="paper-title text-left">Breast Cancer Diagnosis using Spatial Light Interference Microscopy</h4>
+          <p class="text-left">Hassaan Majeed, Mikhail E Kandel, Kevin Han, <strong>Zelun Luo</strong>, Virgilia Macias, Krishnarao Tangella,
+            Andre Balla, Gabriel Popescu</p>
+          <p class="text-left">Journal of Biomedical Optics 2015</p>
+          <p class="text-left">[pdf] [code] [website]</p>
+        </div>
       </div>
-      <div class="col-lg-8 col-lg-offset-1">
-        <h4 class="paper-title text-left">Vision-Based Hand Hygiene Monitoring in Hospitals</h4>
-        <p class="text-left">Serena Yeung, Alexandre Alahi, <strong>Zelun Luo</strong>, Boya Peng, Albert Haque, Amit Singh, Terry Platchek,
-          Arnold Milstein, Li Fei-Fei</p>
-        <p class="text-left">NIPS 2015 Machine Learning for Health Care Workshop</p>
-        <p class="text-left">[pdf] [code] [website]</p>
-      </div>
-    </div>
 
-    <div class="row paper">
-      <div class="col-lg-3">
-        <img src="publications/majeed2015breast.png" class="paper-fig">
+      <div class="row paper">
+        <div class="col-sm-3">
+          <img src="publications/majeed2015high.png" class="paper-fig img-responsive">
+        </div>
+        <div class="col-sm-8 col-sm-offset-1">
+          <h4 class="paper-title text-left">High Throughput Imaging of Blood Smears using White Light Diffraction Phase Microscopy</h4>
+          <p class="text-left">Hassaan Majeed, Mikhail E Kandel, Basanta Bhaduri, Kevin Han, <strong>Zelun Luo</strong>, Krishnarao Tangella,
+            Gabriel Popescu</p>
+          <p class="text-left">SPIE Photonics West: BiOS 2015</p>
+          <p class="text-left">[pdf] [code] [website]</p>
+        </div>
       </div>
-      <div class="col-lg-8 col-lg-offset-1">
-        <h4 class="paper-title text-left">Breast Cancer Diagnosis using Spatial Light Interference Microscopy</h4>
-        <p class="text-left">Hassaan Majeed, Mikhail E Kandel, Kevin Han, <strong>Zelun Luo</strong>, Virgilia Macias, Krishnarao Tangella,
-          Andre Balla, Gabriel Popescu</p>
-        <p class="text-left">Journal of Biomedical Optics 2015</p>
-        <p class="text-left">[pdf] [code] [website]</p>
-      </div>
-    </div>
 
-    <div class="row paper">
-      <div class="col-lg-3">
-        <img src="publications/majeed2015high.png" class="paper-fig">
+      <div class="row paper">
+        <div class="col-sm-3">
+          <img src="publications/majeed2015diagnosis.png" class="paper-fig img-responsive">
+        </div>
+        <div class="col-sm-8 col-sm-offset-1">
+          <h4 class="paper-title text-left">Diagnosis of Breast Cancer Biopsies using Quantitative Phase Imaging</h4>
+          <p class="text-left">Hassaan Majeed, Mikhail E Kandel, Kevin Han, <strong>Zelun Luo</strong>, Virgilia Macias, Krishnarao Tangella,
+            Andre Balla, Gabriel Popescu</p>
+          <p class="text-left">SPIE Photonics West: BiOS 2015</p>
+          <p class="text-left">[pdf] [code] [website]</p>
+        </div>
       </div>
-      <div class="col-lg-8 col-lg-offset-1">
-        <h4 class="paper-title text-left">High Throughput Imaging of Blood Smears using White Light Diffraction Phase Microscopy</h4>
-        <p class="text-left">Hassaan Majeed, Mikhail E Kandel, Basanta Bhaduri, Kevin Han, <strong>Zelun Luo</strong>, Krishnarao Tangella,
-          Gabriel Popescu</p>
-        <p class="text-left">SPIE Photonics West: BiOS 2015</p>
-        <p class="text-left">[pdf] [code] [website]</p>
-      </div>
-    </div>
 
-    <div class="row paper">
-      <div class="col-lg-3">
-        <img src="publications/majeed2015diagnosis.png" class="paper-fig">
-      </div>
-      <div class="col-lg-8 col-lg-offset-1">
-        <h4 class="paper-title text-left">Diagnosis of Breast Cancer Biopsies using Quantitative Phase Imaging</h4>
-        <p class="text-left">Hassaan Majeed, Mikhail E Kandel, Kevin Han, <strong>Zelun Luo</strong>, Virgilia Macias, Krishnarao Tangella,
-          Andre Balla, Gabriel Popescu</p>
-        <p class="text-left">SPIE Photonics West: BiOS 2015</p>
-        <p class="text-left">[pdf] [code] [website]</p>
-      </div>
-    </div>
-
-    <div class="row paper">
-      <div class="col-lg-3">
-        <img src="publications/kandel2015cpp.png" class="paper-fig">
-      </div>
-      <div class="col-lg-8 col-lg-offset-1">
-        <h4 class="paper-title text-left">C++ Software Integration for a High-throughput Phase Imaging Platform</h4>
-        <p class="text-left">Mikhail E Kandel, <strong>Zelun Luo</strong>, Kevin Han, Gabriel Popescu</p>
-        <p class="text-left">SPIE Photonics West: BiOS 2015</p>
-        <p class="text-left">[pdf] [code] [website]</p>
+      <div class="row paper">
+        <div class="col-sm-3">
+          <img src="publications/kandel2015cpp.png" class="paper-fig img-responsive">
+        </div>
+        <div class="col-sm-8 col-sm-offset-1">
+          <h4 class="paper-title text-left">C++ Software Integration for a High-throughput Phase Imaging Platform</h4>
+          <p class="text-left">Mikhail E Kandel, <strong>Zelun Luo</strong>, Kevin Han, Gabriel Popescu</p>
+          <p class="text-left">SPIE Photonics West: BiOS 2015</p>
+          <p class="text-left">[pdf] [code] [website]</p>
+        </div>
       </div>
     </div>
 
@@ -297,7 +306,7 @@ scrollspy function -->
 <section id="contact" class="contact-section">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12">
+      <div class="col-sm-12">
         <h1 class="subtitle">Contact</h1>
       </div>
     </div>
@@ -306,13 +315,13 @@ scrollspy function -->
 
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Scrolling Nav JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 <script src="js/scrolling-nav.js"></script>
 
 </body>

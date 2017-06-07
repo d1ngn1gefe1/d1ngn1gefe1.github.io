@@ -20,10 +20,22 @@ The padding is very important to make sure the scrollspy picks up the right area
 of those sections to manage the look and feel of the site. */
 .intro-section {
   height: 100%;
-  padding-top: 100px;
+  padding-top: 150px;
   padding-bottom: 30px;
   text-align: center;
-  background: #fff; }
+  background: url("../intro/bg.png") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .intro-section h1 {
+    color: white; }
+  .intro-section p {
+    color: white; }
+  .intro-section a {
+    color: white; }
+  .intro-section .my-info {
+    background-color: rgba(0, 0, 0, 0.7); }
 
 .about-section {
   padding-top: 100px;
@@ -38,7 +50,6 @@ of those sections to manage the look and feel of the site. */
   background: #fff; }
 
 .contact-section {
-  height: 100%;
   padding-top: 100px;
   padding-bottom: 30px;
   text-align: center;
@@ -48,15 +59,10 @@ of those sections to manage the look and feel of the site. */
   margin-bottom: 30px; }
 
 .paper {
-  margin-bottom: 30px;
-  display: table;
-  width: 100%; }
-  .paper .paper-fig {
-    width: 200px; }
-  .paper div[class^="col-"] {
-    display: table-cell;
-    float: none;
-    vertical-align: middle; }
+  margin-bottom: 30px; }
+
+.profile-fig {
+  width: 150px; }
 
 .school-fig {
   width: 150px; }
