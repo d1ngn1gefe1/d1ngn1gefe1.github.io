@@ -61,6 +61,11 @@ of those sections to manage the look and feel of the site. */
 .paper {
   margin-bottom: 30px; }
 
+.popover {
+  max-width: 50%; }
+  .popover .popover-title, .popover .popover-content {
+    font-family: "Times New Roman", Times, serif; }
+
 .profile-fig {
   width: 150px; }
 

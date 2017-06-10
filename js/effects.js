@@ -17,3 +17,9 @@ $(function() {
         event.preventDefault();
     });
 });
+
+$(function () {
+  $('[data-toggle="popover"]').popover({
+    container: 'body'
+  })
+})
