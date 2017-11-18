@@ -85,6 +85,21 @@ scrollspy function -->
 
     <div class="row">
       <div class="col-sm-8">
+        <h3 class="text-left">News</h3>
+        <ul>
+          <li><p class="text-left">[2017/11] I am applying to PhD programs for Autumn 2018 entry. </p></li>
+          <li><p class="text-left">[2017/11] Two papers are submitted to CVPR 2018. I will also be an official reviewer for CVPR 2018.</p></li>
+          <li><p class="text-left">[2017/11] I am presenting our work on AI-assisted Senior Healthcare at AMIA 2017 in Washington DC.</p></li> 
+          <li><p class="text-left">[2017/09] Our paper, <a href="http://alan.vision/nips17_website/">Label Efficient Learning of Transferable Representations across Domains and Tasks</a>, is accepted to NIPS 2017. See you at Long Beach in December!</p></li>
+          <li><p class="text-left">[2017/07] I presented my work, <a href="https://arxiv.org/pdf/1701.01821.pdf">Unsupervised Learning of Long-Term Motion Dynamics for Videos</a>, at CVPR 2017 in Honolulu, Hawaii.</p></li>
+          <li><p class="text-left">[2017/06] I am lucky to be an intern at Google with <a href="http://www.cs.cmu.edu/~lujiang/">Dr. Lu Jiang</a> and <a href="http://vision.stanford.edu/lijiali/">Dr. Jia Li</a>.</p></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-sm-8">
         <h3 class="text-left">Education</h3>
         <div class="col-sm-6">
           <img src="about/stanford_seal.png" class="school-fig">
@@ -155,6 +170,54 @@ scrollspy function -->
 
     <div class="row">
       <h3 class="text-left">Computer Vision and Deep Learning</h3>
+      <div class="row paper">
+        <div class="col-sm-3">
+          <img src="publications/luo2018graph.png" class="paper-fig img-responsive">
+        </div>
+        <div class="col-sm-8 col-sm-offset-1">
+          <h4 class="paper-title text-left">Graph Distillation for Action Detection with Privileged Information</h4>
+          <p class="text-left">
+            <span class="label label-success">Action Recognition</span>
+            <span class="label label-success">Multi-Modal Learning</span>
+            <span class="label label-success">Knowledge Distillation</span>
+            <span class="label label-success">Learning Using Priviledged Information</span>
+          </p>
+          <p class="text-left"><strong>Zelun Luo</strong>, Lu Jiang, Jun-Ting Hsieh, Juan Carlos Niebles, Li Fei-Fei</p>
+          <p class="text-left">In submission to CVPR 2018</p>
+          <div class="text-left">
+            <a tabindex="0" class="btn btn-default btn-xs" role="button" data-toggle="popover" data-trigger="hover" data-placement="right"
+               title="Abstract" data-content="In this work, we propose a technique that tackles the video understanding problem under a realistic, demanding condition in which we have limited labeled data and partially observed training modalities. Common methods such as transfer learning do not take advantage of the rich information from extra modalities potentially available in the source domain dataset. On the other hand, previous work on cross-modality learning only focuses on a single domain or task. In this work, we propose a graph-based distillation method that incorporates rich privileged information from a large multi-modal dataset in the source domain, and shows an improved performance in the target domain where data is scarce. Leveraging both a large-scale dataset and its extra modalities, our method learns a better model for temporal action detection and action classification without needing to have access to these modalities during test time. We evaluate our approach on action classification and temporal action detection tasks, and show that our models achieve the state-of-the-art performance on the PKU-MMD and NTU RGB+D datasets."
+            >Abstract</a>
+            <a class="btn btn-default btn-xs" target="_blank" href="http://alan.vision/">PDF</a>
+            <a class="btn btn-default btn-xs" target="_blank" href="http://alan.vision/">Project</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row paper">
+        <div class="col-sm-3">
+          <img src="publications/zou2018unsupervised.png" class="paper-fig img-responsive">
+        </div>
+        <div class="col-sm-8 col-sm-offset-1">
+          <h4 class="paper-title text-left">Unsupervised Adaptation of Depth and Flow Models using Cross-Network Consistency</h4>
+          <p class="text-left">
+            <span class="label label-success">Unsupervised Learning</span>
+            <span class="label label-success">Domain Adaptation</span>
+            <span class="label label-success">Depth Estimation</span>
+            <span class="label label-success">Flow Estimation</span>
+          </p>
+          <p class="text-left">Yuliang Zou, <strong>Zelun Luo</strong>, Jia-Bin Huang</p>
+          <p class="text-left">In submission to CVPR 2018</p>
+          <div class="text-left">
+            <a tabindex="0" class="btn btn-default btn-xs" role="button" data-toggle="popover" data-trigger="hover" data-placement="right"
+               title="Abstract" data-content="We present an unsupervised adaptation framework for simultaneously improving single-view depth estimation and optical flow estimation models in unseen scenes using unlabeled videos. Supervised adaptation approaches require costly dense pixelwise ground truth for fine-tuning the models in the target domain. Whilst unsupervised adaptation techniques exploiting brightness constancy and spatial smoothness priors have been proposed, these assumptions often do not hold and hence makes the training unstable. In this paper, we propose to leverage geometric consistency as a supervisory signal for adapting both depth and flow estimation models in new domains. Our core idea is that for rigid regions we can use the predicted scene depth and camera motion for synthesizing 2D optical flow by backprojecting the induced 3D scene flow. The discrepancy between the synthesized flow (from depth prediction and camera motion) and the estimated flow (from optical flow prediction model) allows us to impose a cross-model consistency loss. All the networks are jointly optimized during training. However, individual models can be applied independently at test time. Extensive experiments on both tasks demonstrate the effectiveness of our approach."
+            >Abstract</a>
+            <a class="btn btn-default btn-xs" target="_blank" href="http://alan.vision/">PDF</a>
+            <a class="btn btn-default btn-xs" target="_blank" href="http://alan.vision/">Project</a>
+          </div>
+        </div>
+      </div>
+
       <div class="row paper">
         <div class="col-sm-3">
           <img src="publications/luo2017label.png" class="paper-fig img-responsive">
@@ -251,7 +314,7 @@ scrollspy function -->
     </div>
 
     <div class="row">
-      <h3 class="text-left">AI + Healthcare</h3>
+      <h3 class="text-left">AI-Assisted Healthcare</h3>
       <p class="text-left">
         I am a member of the Stanford Program in AI-Assisted Care (PAC), which is a collaboration between the Stanford AI Lab and Stanford Clinical Excellence Research Center that aims to use computer vision and machine learning to create AI-assisted smart healthcare spaces. 
       </p>
