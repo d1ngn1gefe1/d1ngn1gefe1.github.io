@@ -84,18 +84,11 @@ of those sections to manage the look and feel of the site. */
 
 .paper {
   margin-bottom: 30px;
+  padding: 10px;
+  //border: 1px solid black;
 
-  //.paper-fig {
-  //  width: 200px;
-  //}
-
-  //display: table;
-  //width: 100%;
-  //div[class^="col-"] {
-  //  display: table-cell;
-  //  float: none;
-  //  vertical-align: middle;
-  //}
+  display: flex;
+  align-items: center;
 }
 
 .popover {
@@ -116,4 +109,8 @@ of those sections to manage the look and feel of the site. */
 
 .company-fig {
   width: 150px;
+}
+
+.label-success {
+  background-color: gray;
 }

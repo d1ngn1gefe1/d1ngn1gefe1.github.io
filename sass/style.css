@@ -59,7 +59,10 @@ of those sections to manage the look and feel of the site. */
   margin-bottom: 30px; }
 
 .paper {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  padding: 10px;
+  display: flex;
+  align-items: center; }
 
 .popover {
   max-width: 50%; }
@@ -74,5 +77,8 @@ of those sections to manage the look and feel of the site. */
 
 .company-fig {
   width: 150px; }
+
+.label-success {
+  background-color: gray; }
 
 /*# sourceMappingURL=style.css.map */
