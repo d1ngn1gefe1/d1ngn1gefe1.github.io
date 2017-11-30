@@ -1,3 +1,5 @@
+/* sass --watch style.scss:style.css */
+
 body {
   width: 100%;
   height: 100%;
@@ -85,10 +87,34 @@ of those sections to manage the look and feel of the site. */
 .paper {
   margin-bottom: 30px;
   padding: 10px;
-  //border: 1px solid black;
 
   display: flex;
   align-items: center;
+}
+
+.project-pair {
+  padding: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+
+  .project {
+    border-bottom: 3px solid gray;
+    background: white;
+    padding: 20px;
+    /*margin: 20px 0px 20px 0px;*/
+    height: 100%;
+
+    .project-fig {
+      margin: 0 auto;
+      width: 70%;
+    }
+
+    .project-text {
+      margin-top: 20px;
+    }
+  }
 }
 
 .popover {
