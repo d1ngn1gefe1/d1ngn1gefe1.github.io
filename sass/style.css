@@ -103,4 +103,8 @@ of those sections to manage the look and feel of the site. */
 .btns {
   margin-bottom: 10px; }
 
+.news {
+  height: 200px;
+  overflow-y: scroll; }
+
 /*# sourceMappingURL=style.css.map */
