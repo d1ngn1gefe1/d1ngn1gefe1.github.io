@@ -16,10 +16,29 @@ html {
 
   .top-nav-collapse {
     padding: 0; } }
+@media all and (max-width: 767px) {
+  h1 {
+    font-size: 5vw; }
+
+  h3 {
+    font-size: 3vw; }
+
+  h4 {
+    font-size: 2vw; }
+
+  p {
+    font-size: 1.8vw; }
+
+  .btn-xs {
+    font-size: 1.8vw;
+    padding: 0.15vw 0.75vw; }
+
+  li {
+    line-height: 1.8vw; } }
 /* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
 The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children
 of those sections to manage the look and feel of the site. */
-.intro-section {
+.section-intro {
   height: 100%;
   padding-top: 120px;
   padding-bottom: 30px;
@@ -29,38 +48,45 @@ of those sections to manage the look and feel of the site. */
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
-  .intro-section h1 {
+  .section-intro h1 {
     color: white; }
-  .intro-section p {
+  .section-intro p {
     color: white; }
-  .intro-section a {
+  .section-intro a {
     color: white; }
-  .intro-section .my-info {
-    background-color: rgba(0, 0, 0, 0.7); }
+  .section-intro .my-info {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-bottom: 1em; }
 
-.about-section {
+.section-about {
   padding-top: 100px;
   padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
   text-align: center;
   background: #eee; }
 
-.services-section {
+.section-publication {
   padding-top: 100px;
   padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
   text-align: center;
   background: #fff; }
 
-.contact-section {
+.section-project {
   padding-top: 100px;
   padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
   text-align: center;
   background: #eee; }
 
 .subtitle {
-  margin-bottom: 30px; }
+  margin-bottom: 2vw; }
 
 .paper {
-  margin-bottom: 30px;
+  margin-bottom: 1.5vw;
   padding: 10px;
   display: flex;
   align-items: center; }
@@ -92,10 +118,14 @@ of those sections to manage the look and feel of the site. */
   width: 150px; }
 
 .school-fig {
-  width: 150px; }
+  max-width: 50%;
+  height: auto;
+  padding: 0.5em; }
 
 .company-fig {
-  width: 150px; }
+  max-width: 50%;
+  height: auto;
+  padding: 0.5em; }
 
 .label-success {
   background-color: gray; }
