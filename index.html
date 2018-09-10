@@ -88,7 +88,7 @@ scrollspy function -->
 
     <div class="row">
       <p class="text-left">
-        I am an incoming PhD student in the Computer Science department at Stanford University starting in September 2018. I am working in the <a href="http://vision.stanford.edu/">Stanford Vision and Learning Lab</a>, advised by <a href="http://vision.stanford.edu/feifeili/">Prof. Fei-Fei Li</a>.
+        I am a first-year PhD student in the Computer Science department at Stanford University. I am working in the <a href="http://vision.stanford.edu/">Stanford Vision and Learning Lab</a>, advised by <a href="http://vision.stanford.edu/feifeili/">Prof. Fei-Fei Li</a>.
       </p>
       <p class="text-left">
         I am a member of the <a href="https://aicare.stanford.edu/">Stanford Program in AI-Assisted Care (PAC)</a>, which is a collaboration between the Stanford AI Lab and Stanford Clinical Excellence Research Center that aims to use computer vision and machine learning to create AI-assisted smart healthcare spaces.
@@ -234,10 +234,11 @@ scrollspy function -->
           <p class="text-left">European Conference on Computer Vision (ECCV) 2018</p>
           <div class="text-left btns">
             <a tabindex="0" class="btn btn-default btn-xs" role="button" data-toggle="popover" data-trigger="hover" data-placement="right"
-               title="Abstract" data-content="We present an unsupervised adaptation framework for simultaneously improving single-view depth estimation and optical flow estimation models in unseen scenes using unlabeled videos. Supervised adaptation approaches require costly dense pixelwise ground truth for fine-tuning the models in the target domain. Whilst unsupervised adaptation techniques exploiting brightness constancy and spatial smoothness priors have been proposed, these assumptions often do not hold and hence makes the training unstable. In this paper, we propose to leverage geometric consistency as a supervisory signal for adapting both depth and flow estimation models in new domains. Our core idea is that for rigid regions we can use the predicted scene depth and camera motion for synthesizing 2D optical flow by backprojecting the induced 3D scene flow. The discrepancy between the synthesized flow (from depth prediction and camera motion) and the estimated flow (from optical flow prediction model) allows us to impose a cross-model consistency loss. All the networks are jointly optimized during training. However, individual models can be applied independently at test time. Extensive experiments on both tasks demonstrate the effectiveness of our approach."
+               title="Abstract" data-content="We present an unsupervised learning framework for simultaneously training single-view depth prediction and optical flow estimation models using unlabeled video sequences. Existing unsupervised methods often exploit brightness constancy and spatial smoothness priors to train depth or flow models. In this paper, we propose to leverage geometric consistency as additional supervisory signals. Our core idea is that for rigid regions we can use the predicted scene depth and camera motion to synthesize 2D optical flow by backprojecting the induced 3D scene flow. The discrepancy between the rigid flow (from depth prediction and camera motion) and the estimated flow (from optical flow model) allows us to impose a cross-task consistency loss. While all the networks are jointly optimized during training, they can be applied independently at test time. Extensive experiments demonstrate that our depth and flow models compare favorably with state-of-the-art unsupervised methods."
             >Abstract</a>
-            <a class="btn btn-default btn-xs disabled" target="_blank" href="http://alan.vision/">PDF</a>
-            <a class="btn btn-default btn-xs disabled" target="_blank" href="http://alan.vision/">Project</a>
+            <a class="btn btn-default btn-xs" target="_blank" href="https://arxiv.org/abs/1809.01649">PDF</a>
+            <a class="btn btn-default btn-xs" target="_blank" href="http://yuliang.vision/DF-Net/">Project</a>
+            <a class="btn btn-default btn-xs" target="_blank" href="https://github.com/vt-vl-lab/DF-Net">Code</a>
           </div>
         </div>
       </div>
