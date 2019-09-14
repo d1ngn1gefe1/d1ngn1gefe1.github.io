@@ -78,8 +78,8 @@ of those sections to manage the look and feel of the site. */
 .section-about {
   padding-top: 100px;
   padding-bottom: 30px;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
   text-align: center;
   background: #eee;
 }
@@ -87,8 +87,8 @@ of those sections to manage the look and feel of the site. */
 .section-publication {
   padding-top: 100px;
   padding-bottom: 30px;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
   text-align: center;
   background: #fff;
 }
@@ -96,8 +96,8 @@ of those sections to manage the look and feel of the site. */
 .section-project {
   padding-top: 100px;
   padding-bottom: 30px;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
   text-align: center;
   background: #eee;
 }
