@@ -147,13 +147,13 @@ of those sections to manage the look and feel of the site. */
 }
 
 .school-fig {
-  max-width: 45%;
+  max-width: 36%;
   height: auto;
   padding: 0.5em;
 }
 
 .company-fig {
-  max-width: 60%;
+  max-width: 48%;
   height: auto;
   padding: 0.5em;
 }
