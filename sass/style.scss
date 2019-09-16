@@ -23,31 +23,31 @@ html {
   }
 }
 
-@media all and (max-width: 767px) { 
+@media all and (max-width: 767px) {
   h1 {
-    font-size: 5vw;
+    font-size: 2em;
   }
 
   h3 {
-    font-size: 3vw;
+    font-size: 1.17em;
   }
 
   h4 {
-    font-size: 2vw;
+    font-size: 1.0em;
   }
 
   p {
-    font-size: 1.8vw;
+    font-size: 0.9em;
   }
 
   .btn-xs {
-    font-size: 1.8vw;
+    font-size: 0.8em;
     padding: 0.15vw 0.75vw;
   }
 
-  li {
-    line-height: 2.5vw;
-  }
+  // li {
+  //   line-height: 2.5vw;
+  // }
 }
 
 /* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
@@ -81,36 +81,35 @@ of those sections to manage the look and feel of the site. */
   .my-info {
     background-color: rgba(0, 0, 0, .7);
     padding-bottom: 1em;
+
+    @media(max-width: 767px) {
+      width: 75%;
+      margin-left: 12.5%;
+    }
+  }
+}
+
+.section-about, .section-publication, .section-project  {
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 30px;
+  padding-left: 5%;
+  padding-right: 5%;
+  @media(max-width: 767px) {
+    padding-left: 1%;
+    padding-right: 1%;
   }
 }
 
 .section-about {
-  //height: 100%;
-  padding-top: 100px;
-  padding-bottom: 30px;
-  padding-left: 5%;
-  padding-right: 5%;
-  text-align: center;
   background: #eee;
 }
 
 .section-publication {
-  //height: 100%;
-  padding-top: 100px;
-  padding-bottom: 30px;
-  padding-left: 5%;
-  padding-right: 5%;
-  text-align: center;
   background: #fff;
 }
 
 .section-project {
-  //height: 100%;
-  padding-top: 100px;
-  padding-bottom: 30px;
-  padding-left: 5%;
-  padding-right: 5%;
-  text-align: center;
   background: #eee;
 }
 
@@ -159,10 +158,6 @@ of those sections to manage the look and feel of the site. */
   }
 }
 
-.profile-fig {
-  width: 150px;
-}
-
 .school-fig {
   max-width: 36%;
   height: auto;
@@ -175,6 +170,20 @@ of those sections to manage the look and feel of the site. */
   padding: 0.5em;
 }
 
+@media(max-width: 767px) {
+  .school-fig {
+    max-width: 60%;
+    height: auto;
+    padding: 0.5em;
+  }
+
+  .company-fig {
+    max-width: 80%;
+    height: auto;
+    padding: 0.5em;
+  }
+}
+
 .label-success {
   background-color: gray;
   line-height: 2.2em;
@@ -182,10 +191,6 @@ of those sections to manage the look and feel of the site. */
 
 .btns {
   margin-bottom: 10px;
-}
-
-.paper-fig {
-  width: 100%;
 }
 
 .news {
