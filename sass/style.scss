@@ -145,13 +145,12 @@ of those sections to manage the look and feel of the site. */
 
   h3.subfield {
     text-align: left;
-    /*text-decoration: underline;*/
-    margin-top: 80px;
+    margin-top: 60px;
   }
 
   .paper {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     text-align: left;
     border-bottom: 2px inset WhiteSmoke;
 
@@ -169,10 +168,6 @@ of those sections to manage the look and feel of the site. */
 
     .paper-info {
       margin: auto;
-    }
-
-    .btns {
-      margin-bottom: 10px;
     }
 
     @media(max-width: 767px) {

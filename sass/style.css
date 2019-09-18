@@ -130,12 +130,11 @@ of those sections to manage the look and feel of the site. */
 }
 .section-publication h3.subfield {
   text-align: left;
-  /*text-decoration: underline;*/
-  margin-top: 80px;
+  margin-top: 60px;
 }
 .section-publication .paper {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   text-align: left;
   border-bottom: 2px inset WhiteSmoke;
   display: flex;
@@ -151,9 +150,6 @@ of those sections to manage the look and feel of the site. */
 }
 .section-publication .paper .paper-info {
   margin: auto;
-}
-.section-publication .paper .btns {
-  margin-bottom: 10px;
 }
 @media (max-width: 767px) {
   .section-publication .paper {
