@@ -23,7 +23,7 @@ html {
   }
 }
 
-@media all and (max-width: 767px) { 
+@media all and (max-width: 767px) {
   h1 {
     font-size: 5vw;
   }
@@ -118,12 +118,17 @@ of those sections to manage the look and feel of the site. */
   margin-bottom: 2vw;
 }
 
-.paper {
-  margin-bottom: 1.5vw;
-  padding: 10px;
+// .paper {
+//   margin-bottom: 1.5vw;
+//   padding: 10px;
+//
+//   display: flex;
+//   align-items: center;
+// }
 
-  display: flex;
-  align-items: center;
+.paper {
+  padding-top: 1.5vw;
+  padding-bottom: 1.5vw;
 }
 
 .project-pair {
@@ -193,10 +198,10 @@ of those sections to manage the look and feel of the site. */
   overflow-y: scroll;
 }
 
-.row {
-  margin-right: 0px;
-  margin-left: 0px
-}
+// .row {
+//   margin-right: 0px;
+//   margin-left: 0px
+// }
 
 .education, .industry {
   p {
