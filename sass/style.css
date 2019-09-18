@@ -23,28 +23,24 @@ html {
 }
 @media all and (max-width: 767px) {
   h1 {
-    font-size: 5vw;
+    font-size: 2em;
   }
 
   h3 {
-    font-size: 3vw;
+    font-size: 1.17em;
   }
 
   h4 {
-    font-size: 2vw;
+    font-size: 1em;
   }
 
   p {
-    font-size: 1.8vw;
+    font-size: 0.9em;
   }
 
   .btn-xs {
-    font-size: 1.8vw;
+    font-size: 0.8em;
     padding: 0.15vw 0.75vw;
-  }
-
-  li {
-    line-height: 2.5vw;
   }
 }
 /* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
@@ -74,31 +70,90 @@ of those sections to manage the look and feel of the site. */
   background-color: rgba(0, 0, 0, 0.7);
   padding-bottom: 1em;
 }
+@media (max-width: 767px) {
+  .section-intro .my-info {
+    width: 75%;
+    margin-left: 12.5%;
+  }
+}
 
-.section-about {
+.section-about, .section-publication, .section-project {
+  text-align: center;
   padding-top: 100px;
   padding-bottom: 30px;
   padding-left: 5%;
   padding-right: 5%;
-  text-align: center;
+}
+@media (max-width: 767px) {
+  .section-about, .section-publication, .section-project {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+
+.section-about {
   background: #eee;
+}
+.section-about .school-fig {
+  max-width: 36%;
+  height: auto;
+  padding: 0.5em;
+}
+@media (max-width: 767px) {
+  .section-about .school-fig {
+    max-width: 48%;
+  }
+}
+.section-about .company-fig {
+  max-width: 48%;
+  height: auto;
+  padding: 0.5em;
+}
+@media (max-width: 767px) {
+  .section-about .company-fig {
+    max-width: 48%;
+  }
+}
+.section-about .education p, .section-about .industry p {
+  margin: 0px;
+}
+.section-about .school, .section-about .company {
+  padding-bottom: 15px;
+}
+.section-about .teaching, .section-about .professional {
+  text-align: left;
 }
 
 .section-publication {
-  padding-top: 100px;
-  padding-bottom: 30px;
-  padding-left: 5%;
-  padding-right: 5%;
-  text-align: center;
   background: #fff;
+}
+.section-publication h3.subfield {
+  text-align: left;
+  text-decoration: underline;
+  margin-top: 30px;
+}
+.section-publication .paper {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: left;
+  border-bottom: 2px inset WhiteSmoke;
+}
+.section-publication .paper img {
+  margin: auto;
+}
+.section-publication .paper .btns {
+  margin-bottom: 10px;
+}
+@media (max-width: 767px) {
+  .section-publication .paper {
+    text-align: center;
+  }
+  .section-publication .paper img {
+    height: 30vw;
+  }
 }
 
 .section-project {
-  padding-top: 100px;
-  padding-bottom: 30px;
-  padding-left: 5%;
-  padding-right: 5%;
-  text-align: center;
   background: #eee;
 }
 
@@ -106,76 +161,11 @@ of those sections to manage the look and feel of the site. */
   margin-bottom: 2vw;
 }
 
-.paper {
-  padding-top: 1.5vw;
-  padding-bottom: 1.5vw;
-}
-
-.project-pair {
-  padding: 20px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-.project-pair .project {
-  border-bottom: 3px solid gray;
-  background: white;
-  padding: 20px;
-  /*margin: 20px 0px 20px 0px;*/
-  height: 100%;
-}
-.project-pair .project .project-fig {
-  margin: 0 auto;
-  width: 70%;
-}
-.project-pair .project .project-text {
-  margin-top: 20px;
-}
-
 .popover {
   max-width: 50%;
 }
 .popover .popover-title, .popover .popover-content {
   font-family: "Times New Roman", Times, serif;
-}
-
-.profile-fig {
-  width: 150px;
-}
-
-.school-fig {
-  max-width: 36%;
-  height: auto;
-  padding: 0.5em;
-}
-
-.company-fig {
-  max-width: 48%;
-  height: auto;
-  padding: 0.5em;
-}
-
-.label-success {
-  background-color: gray;
-  line-height: 2.2em;
-}
-
-.btns {
-  margin-bottom: 10px;
-}
-
-.paper-fig {
-  width: 100%;
-}
-
-.news {
-  height: 200px;
-  overflow-y: scroll;
-}
-
-.education p, .industry p {
-  margin: 0px;
 }
 
 /*# sourceMappingURL=style.css.map */
