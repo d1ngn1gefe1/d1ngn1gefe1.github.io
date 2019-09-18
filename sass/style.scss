@@ -80,7 +80,8 @@ of those sections to manage the look and feel of the site. */
 
   .my-info {
     background-color: rgba(0, 0, 0, .7);
-    padding-bottom: 1em;
+    padding-top: 1em;
+    padding-bottom: 2em;
 
     @media(max-width: 767px) {
       width: 75%;
@@ -162,6 +163,7 @@ of those sections to manage the look and feel of the site. */
       margin: auto;
       img {
         margin: auto;
+        max-height: 180px;
       }
     }
 
@@ -192,14 +194,6 @@ of those sections to manage the look and feel of the site. */
 .subtitle {
   margin-bottom: 2vw;
 }
-
-// .paper {
-//   margin-bottom: 1.5vw;
-//   padding: 10px;
-//
-//   display: flex;
-//   align-items: center;
-// }
 
 .popover {
   max-width: 50%;

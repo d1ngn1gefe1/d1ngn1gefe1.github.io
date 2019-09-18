@@ -68,7 +68,8 @@ of those sections to manage the look and feel of the site. */
 }
 .section-intro .my-info {
   background-color: rgba(0, 0, 0, 0.7);
-  padding-bottom: 1em;
+  padding-top: 1em;
+  padding-bottom: 2em;
 }
 @media (max-width: 767px) {
   .section-intro .my-info {
@@ -146,6 +147,7 @@ of those sections to manage the look and feel of the site. */
 }
 .section-publication .paper .paper-fig img {
   margin: auto;
+  max-height: 180px;
 }
 .section-publication .paper .paper-info {
   margin: auto;
