@@ -133,6 +133,11 @@ of those sections to manage the look and feel of the site. */
   margin-top: 100px;
   margin-bottom: 30px;
 }
+.section-publication h3.subfield-first {
+  text-align: left;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
 .section-publication .paper {
   padding-top: 25px;
   padding-bottom: 25px;
