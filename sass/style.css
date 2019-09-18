@@ -81,13 +81,13 @@ of those sections to manage the look and feel of the site. */
   text-align: center;
   padding-top: 100px;
   padding-bottom: 30px;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 @media (max-width: 767px) {
   .section-about, .section-publication, .section-project {
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 
@@ -137,8 +137,17 @@ of those sections to manage the look and feel of the site. */
   padding-bottom: 15px;
   text-align: left;
   border-bottom: 2px inset WhiteSmoke;
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
 }
-.section-publication .paper img {
+.section-publication .paper .paper-fig {
+  margin: auto;
+}
+.section-publication .paper .paper-fig img {
+  margin: auto;
+}
+.section-publication .paper .paper-info {
   margin: auto;
 }
 .section-publication .paper .btns {
@@ -149,7 +158,10 @@ of those sections to manage the look and feel of the site. */
     text-align: center;
   }
   .section-publication .paper img {
-    height: 30vw;
+    height: 25vw;
+  }
+  .section-publication .paper p {
+    font-size: 1.8vw;
   }
 }
 

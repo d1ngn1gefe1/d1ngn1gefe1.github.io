@@ -93,11 +93,11 @@ of those sections to manage the look and feel of the site. */
   text-align: center;
   padding-top: 100px;
   padding-bottom: 30px;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
   @media(max-width: 767px) {
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 
@@ -154,7 +154,18 @@ of those sections to manage the look and feel of the site. */
     text-align: left;
     border-bottom: 2px inset WhiteSmoke;
 
-    img {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+
+    .paper-fig {
+      margin: auto;
+      img {
+        margin: auto;
+      }
+    }
+
+    .paper-info {
       margin: auto;
     }
 
@@ -165,7 +176,10 @@ of those sections to manage the look and feel of the site. */
     @media(max-width: 767px) {
       text-align: center;
       img {
-        height: 30vw;
+        height: 25vw;
+      }
+      p {
+        font-size: 1.8vw;
       }
     }
   }
