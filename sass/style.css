@@ -82,13 +82,29 @@ of those sections to manage the look and feel of the site. */
   text-align: center;
   padding-top: 100px;
   padding-bottom: 30px;
-  padding-left: 10%;
-  padding-right: 10%;
 }
 @media (max-width: 767px) {
   .section-about, .section-publication, .section-project {
     padding-left: 5%;
     padding-right: 5%;
+  }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .section-about, .section-publication, .section-project {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+@media (max-width: 1999px) and (min-width: 992px) {
+  .section-about, .section-publication, .section-project {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+@media (min-width: 2000px) {
+  .section-about, .section-publication, .section-project {
+    padding-left: 30%;
+    padding-right: 30%;
   }
 }
 
@@ -127,6 +143,9 @@ of those sections to manage the look and feel of the site. */
 
 .section-publication {
   background: #fff;
+  /*  .paper-last {
+      border-bottom: 2px inset WhiteSmoke;
+    }*/
 }
 .section-publication h3.subfield {
   text-align: left;
@@ -142,7 +161,7 @@ of those sections to manage the look and feel of the site. */
   padding-top: 25px;
   padding-bottom: 25px;
   text-align: left;
-  border-top: 2px outset WhiteSmoke;
+  /*border-top: 2px outset WhiteSmoke;*/
   display: flex;
   display: -webkit-flex;
   flex-wrap: wrap;
@@ -168,9 +187,6 @@ of those sections to manage the look and feel of the site. */
     font-size: 1.8vw;
   }
 }
-.section-publication .paper-last {
-  border-bottom: 2px inset WhiteSmoke;
-}
 
 .section-project {
   background: #eee;
@@ -180,11 +196,45 @@ of those sections to manage the look and feel of the site. */
   margin-bottom: 2vw;
 }
 
-.popover {
-  max-width: 50%;
-}
 .popover .popover-title, .popover .popover-content {
   font-family: "Times New Roman", Times, serif;
+  text-align: justify;
+}
+@media (max-width: 767px) {
+  .popover {
+    max-width: 80%;
+  }
+  .popover .popover-title, .popover .popover-content {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .popover {
+    max-width: 60%;
+  }
+  .popover .popover-title, .popover .popover-content {
+    padding-left: 3vw;
+    padding-right: 3vw;
+  }
+}
+@media (max-width: 1999px) and (min-width: 992px) {
+  .popover {
+    max-width: 45%;
+  }
+  .popover .popover-title, .popover .popover-content {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+}
+@media (min-width: 2000px) {
+  .popover {
+    max-width: 35%;
+  }
+  .popover .popover-title, .popover .popover-content {
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
