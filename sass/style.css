@@ -122,7 +122,7 @@ of those sections to manage the look and feel of the site. */
   }
 }
 .section-about .company-fig {
-  max-width: 48%;
+  max-width: 36%;
   height: auto;
   padding: 0.5em;
 }

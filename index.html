@@ -85,7 +85,7 @@ scrollspy function -->
 
     <div class="row">
       <p class="text-left">
-        I am a second-year PhD student in the Computer Science department at Stanford University. I am working in the <a href="http://vision.stanford.edu/">Stanford Vision and Learning Lab</a>, advised by <a href="http://vision.stanford.edu/feifeili/">Prof. Fei-Fei Li</a>.
+        I am third-year PhD student in the Computer Science department at Stanford University. I am working in the <a href="http://vision.stanford.edu/">Stanford Vision and Learning Lab</a>, advised by <a href="http://vision.stanford.edu/feifeili/">Prof. Fei-Fei Li</a>.
       </p>
       <p class="text-left">
         I am a member of the <a href="https://aicare.stanford.edu/">Stanford Program in AI-Assisted Care (PAC)</a>, which is a collaboration between the Stanford AI Lab and Stanford Clinical Excellence Research Center that aims to use computer vision and machine learning to create AI-assisted smart healthcare spaces.
@@ -122,28 +122,35 @@ scrollspy function -->
 
     <div class="row industry">
       <h3 class="text-left">Industry</h3>
-      <div class="col-sm-3 col-xs-6 company">
+      <div class="col-sm-4 col-xs-6 company">
+        <img src="about/nvidia.png" class="img-fluid company-fig img-circle">
+        <p>Nvidia Machine Learning<br>
+        <p><small>Research Intern</small></p>
+        <p><small>Summer 2021 (upcoming)</small></p>
+        </p>
+      </div>
+      <div class="col-sm-4 col-xs-6 company">
         <img src="about/facebook.png" class="img-fluid company-fig img-circle">
         <p>Facebook Research<br>
         <p><small>Research Intern</small></p>
         <p><small>Summer 2019</small></p>
         </p>
       </div>
-      <div class="col-sm-3 col-xs-6 company">
+      <div class="col-sm-4 col-xs-6 company">
         <img src="about/google.png" class="img-fluid company-fig img-circle">
         <p>Google Cloud AI<br>
         <p><small>Research Intern</small></p>
         <p><small>Summer 2017</small></p>
         </p>
       </div>
-      <div class="col-sm-3 col-xs-6 company">
+      <div class="col-sm-4 col-xs-6 company">
         <img src="about/amazon.png" class="img-fluid company-fig img-circle">
         <p>Amazon A9<br>
         <p><small>Research Intern</small></p>
         <p><small>Summer 2016</small></p>
         </p>
       </div>
-      <div class="col-sm-3 col-xs-6 company">
+      <div class="col-sm-4 col-xs-6 company">
         <img src="about/yahoo.png" class="img-fluid company-fig img-circle">
         <p>Yahoo<br>
         <p><small>Software Engineering Intern</small></p>
@@ -166,9 +173,8 @@ scrollspy function -->
     <div class="row professional">
       <h3 class="text-left">Professional Activities</h3>
       <ul>
-      	<li><p>AI Conference Reviewer: CVPR 2020, AAAI 2020, NeurIPS 2019, ICCV 2019, ICML 2019, CVPR 2019, CVPR 2018</p></li>
-      	<li><p>Medical Conference Reviewer: MLHC 2019, MLHC 2018</p></li>
-        <li><p>Journal Reviewer: TPAMI (Jun. 2019), TPAMI (Nov. 2018)</p></li>
+      	<li><p>AI Publication Reviewer: CVPR, AAAI, NeurIPS, ICCV, ECCV, ICML, ICLR, TPAMI</p></li>
+      	<li><p>Medical Publication Reviewer: MLHC, JBHI</p></li>
       </ul>
     </div>
 
@@ -180,6 +186,65 @@ scrollspy function -->
   <div class="container-fluid">
     <div class="row">
       <h1 class="subtitle">Selected Publications</h1>
+    </div>
+
+    <div class="row">
+      <h3 class="subfield-first">Trustworthy AI</h3>
+
+      <div class="row paper">
+        <div class="col-sm-3 col-sm-offset-0 col-xs-offset-2 col-xs-8 paper-fig">
+          <img src="publications/luo2021scalable.png" class="img-responsive">
+        </div>
+        <div class="col-sm-9 col-xs-12 paper-info">
+          <h4>Scalable Differential Privacy with Sparse Network Fine-tuning</h4>
+          <p><strong>Zelun Luo</strong>, Daniel Wu, Ehsan Adeli, Li Fei-Fei</p>
+          <p>Conference on Computer Vision and Pattern Recognition (CVPR) 2021</p>
+          <div>
+            <a tabindex="0" class="btn btn-default btn-xs" role="button" data-toggle="popover" data-trigger="hover" data-placement="bottom"
+               title="Abstract" data-content=
+                   "We propose a novel method for privacy-preserving training of deep neural networks leveraging public, out-domain data. While differential privacy (DP) has emerged as a mechanism to protect sensitive data in training datasets, its application to complex visual recognition tasks remains challenging. Traditional DP methods, such as Differentially-Private Stochastic Gradient Descent (DP-SGD), only perform well on simple datasets and shallow networks, while recent transfer learning-based DP methods often make unrealistic assumptions about the availability and distribution of public data. In this work, we argue that minimizing the number of trainable parameters is the key to improving the privacy-performance tradeoff of DP on complex visual recognition tasks. We also propose a novel transfer learning paradigm that finetunes a very sparse subnetwork with DP, inspired by this argument. We conduct extensive experiments and ablation studies on two visual recognition tasks: CIFAR-100 -> CIFAR-10 (standard DP setting) and the CD-FSL challenge (few-shot, multiple levels of domain shifts) and demonstrate competitive experimental performance."
+            >Abstract</a>
+            <a class="btn btn-default btn-xs" target="_blank" href="">PDF</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row paper">
+        <div class="col-sm-3 col-sm-offset-0 col-xs-offset-2 col-xs-8 paper-fig">
+          <img src="publications/martinezmartin2021ethical.jpg" class="img-responsive">
+        </div>
+        <div class="col-sm-9 col-xs-12 paper-info">
+          <h4>Ethical Issues in Using Ambient Intelligence in Health-care Settings</h4>
+          <p>Nicole Martinez-Martin, <strong>Zelun Luo</strong>, Amit Kaushal, Ehsan Adeli, Albert Haque, Sara S Kelly, Sarah Wieten, Mildred K Cho, David Magnus, Li Fei-Fei, Kevin Schulman, Arnold Milstein</p>
+          <p>The Lancet Digital Health, Volume 3, Issue 2, February 2021</p>
+          <div>
+            <a tabindex="0" class="btn btn-default btn-xs" role="button" data-toggle="popover" data-trigger="hover" data-placement="bottom"
+               title="Abstract" data-content="Ambient intelligence is increasingly finding applications in health-care settings, such as helping to ensure clinician and patient safety by monitoring staff compliance with clinical best practices or relieving staff of burdensome documentation tasks. Ambient intelligence involves using contactless sensors and contact-based wearable devices embedded in health-care settings to collect data (eg, imaging data of physical spaces, audio data, or body temperature), coupled with machine learning algorithms to efficiently and effectively interpret these data. Despite the promise of ambient intelligence to improve quality of care, the continuous collection of large amounts of sensor data in health-care settings presents ethical challenges, particularly in terms of privacy, data management, bias and fairness, and informed consent. Navigating these ethical issues is crucial not only for the success of individual uses, but for acceptance of the field as a whole."
+            >Abstract</a>
+            <a class="btn btn-default btn-xs" target="_blank" href="http://alan.vision/publications/martinezmartin2021ethical.pdf">PDF</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row paper">
+        <div class="col-sm-3 col-sm-offset-0 col-xs-offset-2 col-xs-8 paper-fig">
+          <img src="publications/luo2017label.png" class="img-responsive">
+        </div>
+        <div class="col-sm-9 col-xs-12 paper-info">
+          <h4>Label Efficient Learning of Transferable Representations across Domains and Tasks</h4>
+          <p><strong>Zelun Luo</strong>, Yuliang Zou, Judy Hoffman, Li Fei-Fei</p>
+          <p>Conference on Neural Information Processing Systems (NIPS) 2017</p>
+          <div>
+            <a tabindex="0" class="btn btn-default btn-xs" role="button" data-toggle="popover" data-trigger="hover" data-placement="bottom"
+               title="Abstract" data-content=
+                   "We propose a framework that learns a representation transferable across different domains and tasks in a data efficient manner. Our approach battles domain shift with a domain adversarial loss, and generalizes the embedding to novel task using a metric learning-based approach. Our model is simultaneously optimized on labeled source data and unlabeled or sparsely labeled data in the target domain. Our method shows compelling results on novel classes within a new domain even when only a few labeled examples per class are available, outperforming the prevalent fine-tuning approach. In addition, we demonstrate the effectiveness of our framework on the transfer learning task from image object recognition to video action recognition."
+            >Abstract</a>
+            <a class="btn btn-default btn-xs" target="_blank" href="https://arxiv.org/abs/1712.00123">PDF</a>
+            <a class="btn btn-default btn-xs" target="_blank" href="http://alan.vision/nips17_label/poster.pdf">Poster</a>
+            <a class="btn btn-default btn-xs" target="_blank" href="http://alan.vision/nips17_label/">Project</a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="row">
@@ -220,26 +285,6 @@ scrollspy function -->
             <a class="btn btn-default btn-xs" target="_blank" href="https://arxiv.org/abs/1809.01649">PDF</a>
             <a class="btn btn-default btn-xs" target="_blank" href="http://yuliang.vision/DF-Net/">Project</a>
             <a class="btn btn-default btn-xs" target="_blank" href="https://github.com/vt-vl-lab/DF-Net">Code</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="row paper">
-        <div class="col-sm-3 col-sm-offset-0 col-xs-offset-2 col-xs-8 paper-fig">
-          <img src="publications/luo2017label.png" class="img-responsive">
-        </div>
-        <div class="col-sm-9 col-xs-12 paper-info">
-          <h4>Label Efficient Learning of Transferable Representations across Domains and Tasks</h4>
-          <p><strong>Zelun Luo</strong>, Yuliang Zou, Judy Hoffman, Li Fei-Fei</p>
-          <p>Conference on Neural Information Processing Systems (NIPS) 2017</p>
-          <div>
-            <a tabindex="0" class="btn btn-default btn-xs" role="button" data-toggle="popover" data-trigger="hover" data-placement="bottom"
-               title="Abstract" data-content=
-               "We propose a framework that learns a representation transferable across different domains and tasks in a data efficient manner. Our approach battles domain shift with a domain adversarial loss, and generalizes the embedding to novel task using a metric learning-based approach. Our model is simultaneously optimized on labeled source data and unlabeled or sparsely labeled data in the target domain. Our method shows compelling results on novel classes within a new domain even when only a few labeled examples per class are available, outperforming the prevalent fine-tuning approach. In addition, we demonstrate the effectiveness of our framework on the transfer learning task from image object recognition to video action recognition."
-            >Abstract</a>
-            <a class="btn btn-default btn-xs" target="_blank" href="https://arxiv.org/abs/1712.00123">PDF</a>
-            <a class="btn btn-default btn-xs" target="_blank" href="http://alan.vision/nips17_label/poster.pdf">Poster</a>
-            <a class="btn btn-default btn-xs" target="_blank" href="http://alan.vision/nips17_label/">Project</a>
           </div>
         </div>
       </div>
