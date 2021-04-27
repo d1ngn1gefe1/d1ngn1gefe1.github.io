@@ -53,21 +53,9 @@ const publications = [
       "the continuous collection of large amounts of sensor data in health-care settings presents ethical " +
       "challenges, particularly in terms of privacy, data management, bias and fairness, and informed consent. " +
       "Navigating these ethical issues is crucial not only for the success of individual uses, but for acceptance of " +
-      "the field as a whole."
-  },
-
-  {
-    "title": "Label Efficient Learning of Transferable Representations across Domains and Tasks",
-    "authors": ["Zelun Luo", "Yuliang Zou", "Judy Hoffman", "Li Fei-Fei"],
-    "venue": "Conference on Neural Information Processing Systems (NIPS) 2017",
-    "thumbnail": "publications/luo2017label.png",
-    "abstract": "We propose a framework that learns a representation transferable across different domains and tasks " +
-      "in a data efficient manner. Our approach battles domain shift with a domain adversarial loss, and generalizes " +
-      "the embedding to novel task using a metric learning-based approach. Our model is simultaneously optimized on " +
-      "labeled source data and unlabeled or sparsely labeled data in the target domain. Our method shows compelling " +
-      "results on novel classes within a new domain even when only a few labeled examples per class are available, " +
-      "outperforming the prevalent fine-tuning approach. In addition, we demonstrate the effectiveness of our " +
-      "framework on the transfer learning task from image object recognition to video action recognition."
+      "the field as a whole.",
+    "manuscript": "https://www.thelancet.com/action/showPdf?pii=S2589-7500%2820%2930275-2",
+    "website": "https://www.thelancet.com/journals/landig/article/PIIS2589-7500(20)30275-2/"
   },
 
   {
@@ -85,7 +73,11 @@ const publications = [
       "large-scale dataset and its extra modalities, our method learns a better model for temporal action detection " +
       "and action classification without needing to have access to these modalities during test time. We evaluate " +
       "our approach on action classification and temporal action detection tasks, and show that our models achieve " +
-      "the state-of-the-art performance on the PKU-MMD and NTU RGB+D datasets."
+      "the state-of-the-art performance on the PKU-MMD and NTU RGB+D datasets.",
+    "manuscript": "https://arxiv.org/pdf/1712.00108.pdf",
+    "poster": "https://alan.vision/publications/luo2018graph_poster.pdf",
+    "website": "https://alan.vision/eccv18_graph",
+    "code": "https://github.com/google/graph_distillation"
   },
 
   {
@@ -102,38 +94,10 @@ const publications = [
       "camera motion) and the estimated flow (from optical flow model) allows us to impose a cross-task consistency " +
       "loss. While all the networks are jointly optimized during training, they can be applied independently at test " +
       "time. Extensive experiments demonstrate that our depth and flow models compare favorably with " +
-      "state-of-the-art unsupervised methods."
-  },
-
-  {
-    "title": "Unsupervised Learning of Long-Term Motion Dynamics for Videos",
-    "authors": ["Zelun Luo", "Boya Peng", "De-An Huang", "Alexandre Alahi", "Li Fei-Fei"],
-    "venue": "Conference on Computer Vision and Pattern Recognition (CVPR) 2017",
-    "thumbnail": "publications/luo2017unsupervised.png",
-    "abstract": "We present an unsupervised representation learning approach that compactly encodes the motion " +
-      "dependencies in videos. Given a pair of images from a video clip, our framework learns to predict the " +
-      "long-term 3D motions. To reduce the complexity of the learning framework, we propose to describe the motion " +
-      "as a sequence of atomic 3D flows computed with RGB-D modality. We use a Recurrent Neural Network based " +
-      "Encoder-Decoder framework to predict these sequences of flows. We argue that in order for the decoder to " +
-      "reconstruct these sequences, the encoder must learn a robust video representation that captures long-term " +
-      "motion dependencies and spatial-temporal relations. We demonstrate the effectiveness of our learned temporal " +
-      "representations on activity classification across multiple modalities and datasets such as NTU RGB+D and MSR " +
-      "Daily Activity 3D. Our framework is generic to any input modality, i.e., RGB, depth, and RGB-D videos."
-  },
-
-  {
-    "title": "Towards Viewpoint Invariant 3D Human Pose Estimation",
-    "authors": ["Albert Haque", "Zelun Luo*", "Boya Peng*", "Alexandre Alahi", "Serena Yeung", "Li Fei-Fei"],
-    "venue": "European Conference on Computer Vision (ECCV) 2016",
-    "thumbnail": "publications/haque2016towards.gif",
-    "abstract": "We propose a viewpoint invariant model for 3D human pose estimation from a single depth image. To " +
-      "achieve this, our discriminative model embeds local regions into a learned viewpoint invariant feature space. " +
-      "Formulated as a multi-task learning problem, our model is able to selectively predict partial poses in the " +
-      "presence of noise and occlusion. Our approach leverages a convolutional and recurrent network architecture " +
-      "with a top-down error feedback mechanism to self-correct previous pose estimates in an end-to-end manner. We " +
-      "evaluate our model on a previously published depth dataset and a newly collected human pose dataset " +
-      "containing 100K annotated depth images from extreme viewpoints. Experiments show that our model achieves " +
-      "competitive performance on frontal views while achieving state-of-the-art performance on alternate viewpoints."
+      "state-of-the-art unsupervised methods.",
+    "manuscript": "https://arxiv.org/pdf/1809.01649.pdf",
+    "website": "http://yuliang.vision/DF-Net/",
+    "code": "https://github.com/vt-vl-lab/DF-Net"
   },
 
   {
@@ -150,7 +114,8 @@ const publications = [
       "level and early neurodegenerative disease risk. In this paper, we present a method to perform gait analysis " +
       "from a single camera placed within the home. We show that we can accurately calculate various gait " +
       "parameters, demonstrating the potential for our system to monitor the long-term gait of seniors and thus aid " +
-      "clinicians in understanding a patient’s medical profile."
+      "clinicians in understanding a patient’s medical profile.",
+    "manuscript": "https://arxiv.org/pdf/1812.00169.pdf"
   },
 
   {
@@ -168,7 +133,43 @@ const publications = [
       "in-person observational studies. We present intuitive, qualitative results that analyze human movement " +
       "patterns and conduct spatial analytics which convey our method’s interpretability. This work is a first step " +
       "towards a computer-vision based smart hospital and demonstrates promising results for reducing hospital " +
-      "acquired infections."
+      "acquired infections.",
+    "manuscript": "https://static1.squarespace.com/static/59d5ac1780bd5ef9c396eda6/t/5b7373254ae23704e284bdf4/1534292778467/18.pdf"
+  },
+
+  {
+    "title": "Label Efficient Learning of Transferable Representations across Domains and Tasks",
+    "authors": ["Zelun Luo", "Yuliang Zou", "Judy Hoffman", "Li Fei-Fei"],
+    "venue": "Conference on Neural Information Processing Systems (NIPS) 2017",
+    "thumbnail": "publications/luo2017label.png",
+    "abstract": "We propose a framework that learns a representation transferable across different domains and tasks " +
+      "in a data efficient manner. Our approach battles domain shift with a domain adversarial loss, and generalizes " +
+      "the embedding to novel task using a metric learning-based approach. Our model is simultaneously optimized on " +
+      "labeled source data and unlabeled or sparsely labeled data in the target domain. Our method shows compelling " +
+      "results on novel classes within a new domain even when only a few labeled examples per class are available, " +
+      "outperforming the prevalent fine-tuning approach. In addition, we demonstrate the effectiveness of our " +
+      "framework on the transfer learning task from image object recognition to video action recognition.",
+    "manuscript": "https://arxiv.org/pdf/1712.00123.pdf",
+    "poster": "https://alan.vision/nips17_label/poster.pdf",
+    "website": "https://alan.vision/nips17_label/"
+  },
+
+  {
+    "title": "Unsupervised Learning of Long-Term Motion Dynamics for Videos",
+    "authors": ["Zelun Luo", "Boya Peng", "De-An Huang", "Alexandre Alahi", "Li Fei-Fei"],
+    "venue": "Conference on Computer Vision and Pattern Recognition (CVPR) 2017",
+    "thumbnail": "publications/luo2017unsupervised.png",
+    "abstract": "We present an unsupervised representation learning approach that compactly encodes the motion " +
+      "dependencies in videos. Given a pair of images from a video clip, our framework learns to predict the " +
+      "long-term 3D motions. To reduce the complexity of the learning framework, we propose to describe the motion " +
+      "as a sequence of atomic 3D flows computed with RGB-D modality. We use a Recurrent Neural Network based " +
+      "Encoder-Decoder framework to predict these sequences of flows. We argue that in order for the decoder to " +
+      "reconstruct these sequences, the encoder must learn a robust video representation that captures long-term " +
+      "motion dependencies and spatial-temporal relations. We demonstrate the effectiveness of our learned temporal " +
+      "representations on activity classification across multiple modalities and datasets such as NTU RGB+D and MSR " +
+      "Daily Activity 3D. Our framework is generic to any input modality, i.e., RGB, depth, and RGB-D videos.",
+    "manuscript": "https://arxiv.org/pdf/1701.01821.pdf",
+    "poster": "https://alan.vision/publications/CVPR2017-poster.png"
   },
 
   {
@@ -191,7 +192,8 @@ const publications = [
       "long-term descriptive analytics of senior activities. These analytics include both qualitative and " +
       "quantitative descriptions of senior daily activity patterns that can be interpreted by caregivers. Our work " +
       "is progress towards a smart senior home that uses computer vision to support caregivers in senior healthcare " +
-      "to help meet the challenges of an aging worldwide population."
+      "to help meet the challenges of an aging worldwide population.",
+    "manuscript": "https://arxiv.org/pdf/1708.00163.pdf"
   },
 
   {
@@ -204,22 +206,9 @@ const publications = [
       "and depth sensors for the detection of daily activities, lifestyle patterns, emotions, and vital signs, as " +
       "well as the development of intelligent mechanisms for accurate situational assessment and rapid response. We " +
       "demonstrate an integrated solution for remote monitoring, assessment, and support of seniors living " +
-      "independently at home."
-  },
-
-  {
-    "title": "Vision-Based Hand Hygiene Monitoring in Hospitals",
-    "authors": ["Serena Yeung", "Alexandre Alahi", "Zelun Luo", "Boya Peng", "Albert Haque", "Amit Singh",
-      "Terry Platchek", "Arnold Milstein", "Li Fei-Fei"],
-    "venue": ["American Medical Informatics Association (AMIA), Chicago, November 12-16, 2016",
-      "NIPS Workshop on Machine Learning for Healthcare, 2015"],
-    "thumbnail": "publications/yeung2015vision.png",
-    "abstract": "Recent progress in developing cost-effective depth sensors has enabled new AI-assisted solutions " +
-      "such as assisted driving vehicles and smart spaces. Machine learning techniques have been successfully " +
-      "applied on these depth signals to perceive meaningful information about human behavior. In this work, we " +
-      "propose to deploy depth sensors in hospital settings and use computer vision methods to enable AI-assisted " +
-      "care. We aim to reduce visually-identifiable human errors such as hand hygiene compliance, one of the leading " +
-      "causes of Health Care-Associated Infection (HCAI) in hospitals."
+      "independently at home.",
+    "manuscript": "https://alan.vision/publications/luo2017computer.pdf",
+    "poster": "https://alan.vision/publications/AMIA-Poster.pdf"
   },
 
   {
@@ -244,7 +233,26 @@ const publications = [
       "implemented software tools for autofocusing during imaging, as well as image archiving and data access. To " +
       "illustrate the potential of our technology for large volume pathology screening, we established an " +
       "\"intrinsic marker\" for colorectal disease that detects tissue with dysplasia or colorectal cancer and flags " +
-      "specific areas for further examination, potentially improving the efficiency of existing pathology workflows."
+      "specific areas for further examination, potentially improving the efficiency of existing pathology workflows.",
+    "manuscript": "https://www.spiedigitallibrary.org/journalArticle/Download?fullDOI=10.1117%2F1.JBO.22.6.066016",
+    "website": "https://experts.illinois.edu/en/publications/label-free-tissue-scanner-for-colorectal-cancer-screening"
+  },
+
+  {
+    "title": "Towards Viewpoint Invariant 3D Human Pose Estimation",
+    "authors": ["Albert Haque", "Zelun Luo*", "Boya Peng*", "Alexandre Alahi", "Serena Yeung", "Li Fei-Fei"],
+    "venue": "European Conference on Computer Vision (ECCV) 2016",
+    "thumbnail": "publications/haque2016towards.gif",
+    "abstract": "We propose a viewpoint invariant model for 3D human pose estimation from a single depth image. To " +
+      "achieve this, our discriminative model embeds local regions into a learned viewpoint invariant feature space. " +
+      "Formulated as a multi-task learning problem, our model is able to selectively predict partial poses in the " +
+      "presence of noise and occlusion. Our approach leverages a convolutional and recurrent network architecture " +
+      "with a top-down error feedback mechanism to self-correct previous pose estimates in an end-to-end manner. We " +
+      "evaluate our model on a previously published depth dataset and a newly collected human pose dataset " +
+      "containing 100K annotated depth images from extreme viewpoints. Experiments show that our model achieves " +
+      "competitive performance on frontal views while achieving state-of-the-art performance on alternate viewpoints.",
+    "manuscript": "https://arxiv.org/pdf/1603.07076.pdf",
+    "website": "https://www.alberthaque.com/projects/viewpoint_3d_pose/"
   },
 
   {
@@ -252,7 +260,25 @@ const publications = [
     "authors": ["Hassaan Majeed", "Tan H. Nguyen", "Mikhail E. Kandel", "Kevin Han", "Zelun Luo", "Virgilia Macias",
       "Krishnarao Tangella", "Andre Balla", "Minh N. Do", "Gabriel Popescu"],
     "venue": "United States and Canadian Academy of Pathology (USCAP), Seattle, WA, March 12-18, 2016",
-    "thumbnail": "publications/majeed2016towards.png"
+    "thumbnail": "publications/majeed2016towards.png",
+    "abstract": "",
+    "website": "https://light.ece.illinois.edu/index.html/publications/conferences"
+  },
+
+  {
+    "title": "Vision-Based Hand Hygiene Monitoring in Hospitals",
+    "authors": ["Serena Yeung", "Alexandre Alahi", "Zelun Luo", "Boya Peng", "Albert Haque", "Amit Singh",
+      "Terry Platchek", "Arnold Milstein", "Li Fei-Fei"],
+    "venue": ["American Medical Informatics Association (AMIA), Chicago, November 12-16, 2016",
+      "NIPS Workshop on Machine Learning for Healthcare, 2015"],
+    "thumbnail": "publications/yeung2015vision.png",
+    "abstract": "Recent progress in developing cost-effective depth sensors has enabled new AI-assisted solutions " +
+      "such as assisted driving vehicles and smart spaces. Machine learning techniques have been successfully " +
+      "applied on these depth signals to perceive meaningful information about human behavior. In this work, we " +
+      "propose to deploy depth sensors in hospital settings and use computer vision methods to enable AI-assisted " +
+      "care. We aim to reduce visually-identifiable human errors such as hand hygiene compliance, one of the leading " +
+      "causes of Health Care-Associated Infection (HCAI) in hospitals.",
+    "manuscript": "http://ai.stanford.edu/~syyeung/resources/vision_hand_hh_nipsmlhc.pdf"
   },
 
   {
@@ -273,7 +299,9 @@ const publications = [
       "compared against the diagnosis of the two pathologists on corresponding H&E stained tissue images and the " +
       "number of agreements were counted. The agreement between SLIM and H&E based diagnosis was 88% for the first " +
       "pathologist and 87% for the second. Our results demonstrate the potential and promise of SLIM for " +
-      "quantitative, label-free, and high-throughput diagnosis."
+      "quantitative, label-free, and high-throughput diagnosis.",
+    "manuscript": "http://light.ece.illinois.edu/wp-content/uploads/2015/10/Hassaan_JBO_20_11_111210.pdf",
+    "website": "https://experts.illinois.edu/en/publications/breast-cancer-diagnosis-using-spatial-light-interference-microsco"
   },
 
   {
@@ -293,7 +321,9 @@ const publications = [
       "structure (intrinsic contrast) rather than the complex interplay of stain and sample. We present here our " +
       "first steps to automate peripheral blood smear scanning, in particular a method to generate the quantitative " +
       "phase image of an entire blood smear at high throughput using white light diffraction phase microscopy " +
-      "(wDPM), a single shot and common path interferometric imaging technique."
+      "(wDPM), a single shot and common path interferometric imaging technique.",
+    "manuscript": "https://doi.org/10.1117/12.2080200",
+    "website": "https://experts.illinois.edu/en/publications/high-throughput-imaging-of-blood-smears-using-white-light-diffrac"
   },
 
   {
@@ -318,7 +348,9 @@ const publications = [
       "the diagnosis of the two pathologists on H&E stained tissue images and the number of agreements were counted. " +
       "In our experiment, the agreement between SLIM and H&E based diagnosis was measured to be 88%. Our preliminary " +
       "results demonstrate the potential and promise of SLIM for a push in the future towards quantitative, " +
-      "label-free and high throughput diagnosis."
+      "label-free and high throughput diagnosis.",
+    "manuscript": "https://doi.org/10.1117/12.2080132",
+    "website": "https://experts.illinois.edu/en/publications/diagnosis-of-breast-cancer-biopsies-using-quantitative-phase-imag"
   },
 
   {
@@ -337,7 +369,9 @@ const publications = [
       "inattentive or uninitiated. This poses an immediate challenge for moving our techniques beyond the lab to " +
       "biologically oriented collaborators and clinical practitioners. To meet these challenges, we present our new " +
       "Quantitative Phase Imaging pipeline, with improved instrument performance, friendly user interface and robust " +
-      "data processing features, enabling us to acquire and catalog clinical datasets hundreds of gigapixels in size."
+      "data processing features, enabling us to acquire and catalog clinical datasets hundreds of gigapixels in size.",
+    "manuscript": "https://doi.org/10.1117/12.2080212",
+    "website": "https://experts.illinois.edu/en/publications/c-software-integration-for-a-high-throughput-phase-imaging-platfo"
   }
 ]
 
@@ -346,26 +380,42 @@ $(document).ready(function() {
     let authors = publication.authors.join(", ").replace("Zelun Luo", '<strong>$&</strong>');
     let venue = $.isArray(publication.venue) ? publication.venue.join("<br>") : publication.venue;
 
-    $("#publications").append(
-      $("<div/>", {"class": "row paper"}).append(
-        $("<div/>", {"class": "col-sm-3 col-sm-offset-0 col-xs-offset-2 col-xs-8 paper-fig"}).append(
+    let buttons =
+      $("<div/>", {"class": "btn-group btn-group-sm", "role": "group"}).append(
+        $("<button/>", {"class": "btn btn-outline-dark", "type": "button", "data-bs-toggle": "collapse",
+          "data-bs-target": "#collapse-abstract-"+publication_index, "aria-expanded": "false",
+          "aria-controls": "collapse-abstract", text: "Abstract"})
+      )
+
+    $.each(["Manuscript", "Website", "Poster"], function(button_index, button_name) {
+      if (button_name.toLowerCase() in publication) {
+        buttons.append(
+          $("<a/>", {"class": "btn btn-outline-dark", "href": publication[button_name.toLowerCase()],
+            "target": "_blank", "role": "button", text: button_name})
+        )
+      }
+    });
+
+    $("#papers").append(
+      $("<div/>", {"class": "row m-4 border rounded shadow align-items-center publication"}).append(
+        $("<div/>", {"class": "col-sm-3 col-sm-offset-0 col-xs-offset-2 col-xs-8 p-4"}).append(
           $("<img/>", {"class": "img-fluid", src: publication.thumbnail})
         )
       ).append(
-        $("<div/>", {"class": "col-sm-9 col-xs-12 paper-info"}).append(
-          $("<h6/>", {text: publication.title})
+        $("<div/>", {"class": "col-sm-9 col-xs-12 text-sm-start p-4"}).append(
+          $("<h5/>", {text: publication.title})
         ).append(
           $("<p/>", {html: authors+"<br>"+venue})
         ).append(
-          $("<div/>", {"class": "btn-group btn-group-sm", "role": "group"}).append(
-            $("<button/>", {"class": "btn btn-primary", "type": "button", "data-bs-toggle": "collapse",
-              "data-bs-target": "#collapse-abstract-"+publication_index, "aria-expanded": "false",
-              "aria-controls": "collapse-abstract", text: "Abstract"})
-          )
+          buttons
         ).append(
-          $("<div/>", {"class": "collapse", id: "collapse-abstract-"+publication_index}).append(
-            $("<div/>", {"class": "card card-body"}).append(
-              $("<p/>", {text: publication.abstract})
+          $("<div/>", {"class": "collapse mt-2", id: "collapse-abstract-"+publication_index}).append(
+            $("<div/>", {"class": "card border-dark"}).append(
+              $("<div/>", {"class": "card-header text-center", text: "Abstract"})
+            ).append(
+              $("<div/>", {"class": "card-body"}).append(
+                $("<p/>", {"class": "card-text", text: publication.abstract})
+              )
             )
           )
         )

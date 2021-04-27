@@ -21,203 +21,205 @@
 <!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap
 scrollspy function -->
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body data-bs-spy="scroll" data-bs-target="#navbar">
 
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header page-scroll">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand page-scroll" href="#page-top">Alan Luo</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="nav navbar-nav">
-        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-        <li class="hidden">
-          <a class="page-scroll" href="#page-top"></a>
-        </li>
-        <li>
-          <a class="page-scroll" href="#about">About</a>
-        </li>
-        <li>
-          <a class="page-scroll" href="#publication">Publications</a>
-        </li>
-      </ul>
-    </div>
-    <!-- /.navbar-collapse -->
-  </div>
-  <!-- /.container -->
-</nav>
-
-<!-- Section: Introduction -->
-<section class="section-intro">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-6 col-xs-offset-3 my-info">
-        <a href="https://youtu.be/dQw4w9WgXcQ"><h1>Zelun (Alan) Luo</a></h1>
-        <p>
-          PhD Student<br>
-          <a href="http://svl.stanford.edu/">Stanford Vision and Learning Lab</a><br>
-          Advisor: <a href="https://profiles.stanford.edu/fei-fei-li">Prof. Fei-Fei Li</a><br>
-          alanzluo at stanford dot edu<br>
-          <a href="https://scholar.google.com/citations?user=MVUbYCkAAAAJ&hl=en">[Google Scholar]</a>
-          <a href="https://github.com/d1ngn1gefe1">[Github]</a>
-          <a href="intro/cv.pdf">[CV (updated on July 2018)]</a>
-        </p>
+  <header>
+    <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light px-3" id="navbar">
+      <div class="container-fluid">
+        <span class="navbar-brand me-4">
+          <img src="seal.svg" alt="" width="30" height="30" class="d-inline-block align-text-center">
+          Zelun (Alan) Luo
+        </span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-nav" aria-controls="navbar-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-nav">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#intro">Intro</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#publications">Publications</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </nav>
+  </header>
 
-<!-- Section: About -->
-<section class="section-about">
-  <div class="container-fluid">
-    <div class="row">
-      <h1 class="subtitle">About</h1>
-    </div>
+  <main>
+    <!-- Section: Introduction -->
+    <section class="py-5" id="intro">
+      <div class="container p-5">
+        <div class="row justify-content-center">
+          <div class="col-10 offset-1 p-3 text-center my-info">
+            <h1 class="text-light">Zelun (Alan) Luo</h1>
+            <p class="text-light">
+              PhD Student<br>
+              <a class="text-light" href="http://svl.stanford.edu/">Stanford Vision and Learning Lab</a><br>
+              Advisor: <a class="text-light" href="https://profiles.stanford.edu/fei-fei-li">Prof. Fei-Fei Li</a><br>
+              alanzluo at stanford dot edu<br>
+              <a class="text-light" href="https://scholar.google.com/citations?user=MVUbYCkAAAAJ&hl=en">[Google Scholar]</a>
+              <a class="text-light" href="https://github.com/d1ngn1gefe1">[Github]</a>
+              <a class="text-light" href="intro/cv.pdf">[CV (updated on July 2018)]</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="row">
-      <p class="text-left">
-        I am third-year PhD student in the Computer Science department at Stanford University. I am working in the <a href="http://vision.stanford.edu/">Stanford Vision and Learning Lab</a>, advised by <a href="http://vision.stanford.edu/feifeili/">Prof. Fei-Fei Li</a>.
+    <!-- Section: About -->
+    <section class="py-5" id="about">
+      <div class="container p-5">
+        <div class="row my-5">
+          <h1 class="subtitle text-light text-center"><span class="bg-primary rounded px-4 py-2">About</span></h1>
+        </div>
+
+        <div class="row">
+          <p class="text-left">
+            I am third-year PhD student in the Computer Science department at Stanford University. I am working in the <a href="http://vision.stanford.edu/">Stanford Vision and Learning Lab</a>, advised by <a href="http://vision.stanford.edu/feifeili/">Prof. Fei-Fei Li</a>.
+          </p>
+          <p class="text-left">
+            I am a member of the <a href="https://aicare.stanford.edu/">Stanford Program in AI-Assisted Care (PAC)</a>, which is a collaboration between the Stanford AI Lab and Stanford Clinical Excellence Research Center that aims to use computer vision and machine learning to create AI-assisted smart healthcare spaces.
+          </p>
+          <p class="text-left">
+            Before that, I received my master's degree from Stanford University and my bachelor's degree from the University of Illinois Urbana-Champaign. During my master's study, I worked in the <a href="http://vision.stanford.edu/">Stanford Vision and Learning Lab</a> with <a href="http://vision.stanford.edu/feifeili/">Prof. Fei-Fei Li</a>, and the <a href="http://med.stanford.edu/cerc.html">Clinical Excellence Research Center</a> with <a href="https://med.stanford.edu/profiles/arnold-milstein">Prof. Arnold Milstein</a>. During my undergraduate study, I spent three years reseaching in the <a href="http://light.ece.illinois.edu/">Quantitative Light Imaging Laboratory</a> with <a href="http://light.ece.illinois.edu/">Prof. Gabriel Popescu</a>, and the <a href="http://vision.ai.illinois.edu/">Computer Vision and Robotics Laboratory</a> with <a href="https://filebox.ece.vt.edu/~jbhuang/">Prof. Jia-Bin Huang</a> and <a href="http://vision.ai.illinois.edu/ahuja.html">Prof. Narendra Ahuja</a>.
+          </p>
+        </div>
+
+        <div class="row">
+          <h4 class="text-left">Education</h4>
+          <div class="col-sm-4 col-xs-6 text-center">
+            <img class="my-2" src="about/stanford_seal.png" width="150" height="150">
+            <p>
+              Stanford University<br>
+              <small>Doctor of Philosophy</small><br>
+              <small>Computer Science</small>
+            </p>
+          </div>
+          <div class="col-sm-4 col-xs-6 text-center">
+            <img class="my-2" src="about/stanford_seal.png" width="150" height="150">
+            <p>Stanford University<br>
+              <small>Master of Science</small><br>
+              <small>Computer Science</small>
+            </p>
+          </div>
+          <div class="col-sm-4 col-xs-6 text-center">
+            <img class="my-2" src="about/uiuc_seal.png" width="150" height="150">
+            <p>University of Illinois Urbana-Champaign<br>
+              <small>Bachelor of Science</small><br>
+              <small>Electrical and Computer Engineering</small></p>
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <h4 class="text-left">Industry</h4>
+          <div class="col-sm-4 col-xs-6 text-center">
+            <img class="my-2 rounded-circle" src="about/nvidia.png" width="150" height="150">
+            <p>Nvidia Machine Learning<br>
+              <small>Research Intern</small><br>
+              <small>Summer 2021 (upcoming)</small>
+            </p>
+          </div>
+          <div class="col-sm-4 col-xs-6 text-center">
+            <img class="my-2 rounded-circle" src="about/facebook.png" width="150" height="150">
+            <p>Facebook Research<br>
+              <small>Research Intern</small><br>
+              <small>Summer 2019</small>
+            </p>
+          </div>
+          <div class="col-sm-4 col-xs-6 text-center">
+            <img class="my-2 rounded-circle" src="about/google.png" width="150" height="150">
+            <p>Google Cloud AI<br>
+              <small>Research Intern</small><br>
+              <small>Summer 2017</small>
+            </p>
+          </div>
+          <div class="col-sm-4 col-xs-6 text-center">
+            <img class="my-2 rounded-circle" src="about/amazon.png" width="150" height="150">
+            <p>Amazon A9<br>
+              <small>Research Intern</small><br>
+              <small>Summer 2016</small>
+            </p>
+          </div>
+          <div class="col-sm-4 col-xs-6 text-center">
+            <img class="my-2 rounded-circle" src="about/yahoo.png" width="150" height="150">
+            <p>Yahoo<br>
+              <small>Software Engineering Intern</small><br>
+              <small>Summer 2015</small>
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <h4 class="text-left">Teaching</h4>
+          <ul>
+            <li><p><a href="http://cs337.stanford.edu/">MED 277/CS 337 (AI-Assisted Health Care)</a>: Head Teaching Assistant (Fall 2018); Teaching Assistant (Winter 2018)</p></li>
+            <li><p><a href="http://cs231n.stanford.edu/">CS 231N (Convolutional Neural Networks for Visual Recognition)</a>: Teaching Assistant (Spring 2017)</p></li>
+            <li><p><a href="http://cs224n.stanford.edu/">CS 224N (Natural Language Processing with Deep Learning)</a>: Teaching Assistant (Winter 2017)</p></li>
+            <li><p><a href="http://cs109.stanford.edu/">CS 109 (Probability for Computer Scientists)</a>: Teaching Assistant (Winter 2016 & Spring 2016)</p></li>
+            <li><p><a href="http://cs131.stanford.edu/">CS 131 (Computer Vision: Foundations and Applications)</a>: Teaching Assistant (Fall 2015); Head Teaching Assistant (Fall 2016)</p></li>
+          </ul>
+        </div>
+
+        <div class="row">
+          <h4 class="text-left">Professional Activities</h4>
+          <ul>
+            <li><p>AI Publication Reviewer: CVPR, AAAI, NeurIPS, ICCV, ECCV, ICML, ICLR, TPAMI</p></li>
+            <li><p>Medical Publication Reviewer: MLHC, JBHI</p></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Publications -->
+    <section class="py-5" id="publications">
+      <div class="container p-5">
+        <div class="row my-5">
+          <h1 class="text-light text-center"><span class="bg-primary rounded px-4 py-2">Selected Publications</span></h1>
+        </div>
+        <div id="papers"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <hr>
+      <p class="float-end">
+        <a href="#">Back to top</a>
       </p>
-      <p class="text-left">
-        I am a member of the <a href="https://aicare.stanford.edu/">Stanford Program in AI-Assisted Care (PAC)</a>, which is a collaboration between the Stanford AI Lab and Stanford Clinical Excellence Research Center that aims to use computer vision and machine learning to create AI-assisted smart healthcare spaces.
-      </p>
-      <p class="text-left">
-        Before that, I received my master's degree from Stanford University and my bachelor's degree from the University of Illinois Urbana-Champaign. During my master's study, I worked in the <a href="http://vision.stanford.edu/">Stanford Vision and Learning Lab</a> with <a href="http://vision.stanford.edu/feifeili/">Prof. Fei-Fei Li</a>, and the <a href="http://med.stanford.edu/cerc.html">Clinical Excellence Research Center</a> with <a href="https://med.stanford.edu/profiles/arnold-milstein">Prof. Arnold Milstein</a>. During my undergraduate study, I spent three years reseaching in the <a href="http://light.ece.illinois.edu/">Quantitative Light Imaging Laboratory</a> with <a href="http://light.ece.illinois.edu/">Prof. Gabriel Popescu</a>, and the <a href="http://vision.ai.illinois.edu/">Computer Vision and Robotics Laboratory</a> with <a href="https://filebox.ece.vt.edu/~jbhuang/">Prof. Jia-Bin Huang</a> and <a href="http://vision.ai.illinois.edu/ahuja.html">Prof. Narendra Ahuja</a>.
-      </p>
+      <p>Last updated Apr 27, 2021</p>
     </div>
+  </footer>
 
-    <div class="row education">
-      <h3 class="text-left">Education</h3>
-      <div class="col-sm-4 col-xs-6 school">
-        <img src="about/stanford_seal.png" class="img-fluid school-fig">
-        <p>Stanford University</p>
-        <p><small>Doctor of Philosophy</small></p>
-        <p><small>Computer Science</small></p>
-        </p>
-      </div>
-      <div class="col-sm-4 col-xs-6 school">
-        <img src="about/stanford_seal.png" class="img-fluid school-fig">
-        <p>Stanford University</p>
-        <p><small>Master of Science</small></p>
-        <p><small>Computer Science</small></p>
-        </p>
-      </div>
-      <div class="col-sm-4 col-xs-6 school">
-        <img src="about/uiuc_seal.png" class="img-fluid school-fig">
-        <p>University of Illinois Urbana-Champaign</p>
-        <p><small>Bachelor of Science</small></p>
-        <p><small>Electrical and Computer Engineering</small></p>
-        </p>
-      </div>
-    </div>
+  <!--Google Analytics-->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+          }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-    <div class="row industry">
-      <h3 class="text-left">Industry</h3>
-      <div class="col-sm-4 col-xs-6 company">
-        <img src="about/nvidia.png" class="img-fluid company-fig img-circle">
-        <p>Nvidia Machine Learning<br>
-        <p><small>Research Intern</small></p>
-        <p><small>Summer 2021 (upcoming)</small></p>
-        </p>
-      </div>
-      <div class="col-sm-4 col-xs-6 company">
-        <img src="about/facebook.png" class="img-fluid company-fig img-circle">
-        <p>Facebook Research<br>
-        <p><small>Research Intern</small></p>
-        <p><small>Summer 2019</small></p>
-        </p>
-      </div>
-      <div class="col-sm-4 col-xs-6 company">
-        <img src="about/google.png" class="img-fluid company-fig img-circle">
-        <p>Google Cloud AI<br>
-        <p><small>Research Intern</small></p>
-        <p><small>Summer 2017</small></p>
-        </p>
-      </div>
-      <div class="col-sm-4 col-xs-6 company">
-        <img src="about/amazon.png" class="img-fluid company-fig img-circle">
-        <p>Amazon A9<br>
-        <p><small>Research Intern</small></p>
-        <p><small>Summer 2016</small></p>
-        </p>
-      </div>
-      <div class="col-sm-4 col-xs-6 company">
-        <img src="about/yahoo.png" class="img-fluid company-fig img-circle">
-        <p>Yahoo<br>
-        <p><small>Software Engineering Intern</small></p>
-        <p><small>Summer 2015</small></p>
-        </p>
-      </div>
-    </div>
+    ga('create', 'UA-100690611-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 
-    <div class="row teaching">
-      <h3 class="text-left">Teaching</h3>
-      <ul>
-        <li><p><a href="http://cs337.stanford.edu/">MED 277/CS 337 (AI-Assisted Health Care)</a>: Head Teaching Assistant (Fall 2018); Teaching Assistant (Winter 2018)</p></li>
-        <li><p><a href="http://cs231n.stanford.edu/">CS 231N (Convolutional Neural Networks for Visual Recognition)</a>: Teaching Assistant (Spring 2017)</p></li>
-        <li><p><a href="http://cs224n.stanford.edu/">CS 224N (Natural Language Processing with Deep Learning)</a>: Teaching Assistant (Winter 2017)</p></li>
-        <li><p><a href="http://cs109.stanford.edu/">CS 109 (Probability for Computer Scientists)</a>: Teaching Assistant (Winter 2016 & Spring 2016)</p></li>
-        <li><p><a href="http://cs131.stanford.edu/">CS 131 (Computer Vision: Foundations and Applications)</a>: Teaching Assistant (Fall 2015); Head Teaching Assistant (Fall 2016)</p></li>
-      </ul>
-    </div>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-    <div class="row professional">
-      <h3 class="text-left">Professional Activities</h3>
-      <ul>
-      	<li><p>AI Publication Reviewer: CVPR, AAAI, NeurIPS, ICCV, ECCV, ICML, ICLR, TPAMI</p></li>
-      	<li><p>Medical Publication Reviewer: MLHC, JBHI</p></li>
-      </ul>
-    </div>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
-  </div>
-</section>
-
-<!-- Section: Publication-->
-<section class="section-publication">
-  <div id="publications" class="container-fluid">
-    <div class="row">
-      <h1 class="subtitle">Selected Publications</h1>
-    </div>
+  <!-- Custom JavaScript files -->
+  <script src="js/publications.js"></script>
 
 
-  </div>
-</section>
-
-<!--Google Analytics-->
-<script>
-  (function (i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r;
-    i[r] = i[r] || function () {
-          (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-    a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-    a.async = 1;
-    a.src = g;
-    m.parentNode.insertBefore(a, m)
-  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-  ga('create', 'UA-100690611-1', 'auto');
-  ga('send', 'pageview');
-</script>
-
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-
-<!-- Custom JavaScript files -->
-<script src="js/publications.js"></script>
 
 </body>
 
