@@ -1,10 +1,26 @@
-const publications = [
+const areas = {
+  "Activity Recognition": "fas fa-running",
+  "Healthcare": "fas fa-laptop-medical",
+  "Learning Paradigm": "fas fa-bezier-curve",
+  "Trustworthy AI": "fas fa-balance-scale",
+  "3D Geometry": "fas fa-shapes"
+}
+
+const resources = {
+  "Abstract": "fas fa-list",
+  "Manuscript": "far fa-clipboard",
+  "Poster": "far fa-image",
+  "Website": "fas fa-globe-americas"
+}
+
+const papers = [
   {
     "title": "MOMA: Multi-Object Multi-Actor Activity Parsing",
     "authors": ["Zelun Luo*", "Wanze Xie*", "Siddharth Kapoor", "Yiyun Liang", "Michael Cooper", "Juan Carlos Niebles",
       "Ehsan Adeli", "Li Fei-Fei"],
     "venue": "In Submission",
     "thumbnail": "publications/luo2021moma.png",
+    "areas": ["Trustworthy AI: Explainability", "Activity Recognition"],
     "abstract": "Complex activities often involve multiple humans utilizing a variety of objects to complete actions " +
       "(e.g. in healthcare settings physicians, nurses, and patients interact with each other and with a variety of " +
       "medical devices). This poses a challenge that requires a detailed understanding of the actors' roles, " +
@@ -25,6 +41,7 @@ const publications = [
     "authors": ["Zelun Luo", "Daniel Wu", "Ehsan Adeli", "Li Fei-Fei"],
     "venue": "Conference on Computer Vision and Pattern Recognition (CVPR) 2021",
     "thumbnail": "publications/luo2021scalable.png",
+    "areas": ["Trustworthy AI: Privacy"],
     "abstract": "We propose a novel method for privacy-preserving training of deep neural networks leveraging " +
       "public, out-domain data. While differential privacy (DP) has emerged as a mechanism to protect sensitive data " +
       "in training datasets, its application to complex visual recognition tasks remains challenging. Traditional DP " +
@@ -44,6 +61,7 @@ const publications = [
       "Sarah Wieten", "Mildred K Cho", "David Magnus", "Li Fei-Fei", "Kevin Schulman", "Arnold Milstein"],
     "venue": "The Lancet Digital Health, Volume 3, Issue 2, February 2021",
     "thumbnail": "publications/martinezmartin2021ethical.jpg",
+    "areas": ["Healthcare: Ambient Intelligence in Healthcare", "Trustworthy AI: Ethics"],
     "abstract": "Ambient intelligence is increasingly finding applications in health-care settings, such as helping " +
       "to ensure clinician and patient safety by monitoring staff compliance with clinical best practices or " +
       "relieving staff of burdensome documentation tasks. Ambient intelligence involves using contactless sensors " +
@@ -63,6 +81,7 @@ const publications = [
     "authors": ["Zelun Luo", "Jun-Ting Hsieh", "Lu Jiang", "Juan Carlos Niebles", "Li Fei-Fei"],
     "venue": "European Conference on Computer Vision (ECCV) 2018",
     "thumbnail": "publications/luo2018graph.png",
+    "areas": ["Learning Paradigm: Learning Using Privileged Information (LUPI)", "Activity Recognition"],
     "abstract": "In this work, we propose a technique that tackles the video understanding problem under a " +
       "realistic, demanding condition in which we have limited labeled data and partially observed training " +
       "modalities. Common methods such as transfer learning do not take advantage of the rich information from extra " +
@@ -85,6 +104,7 @@ const publications = [
     "authors": ["Yuliang Zou", "Zelun Luo", "Jia-Bin Huang"],
     "venue": "European Conference on Computer Vision (ECCV) 2018",
     "thumbnail": "publications/zou2018dfnet.gif",
+    "areas": ["Learning Paradigm: Self-Supervised Learning", "3D Geometry"],
     "abstract": "We present an unsupervised learning framework for simultaneously training single-view depth " +
       "prediction and optical flow estimation models using unlabeled video sequences. Existing unsupervised methods " +
       "often exploit brightness constancy and spatial smoothness priors to train depth or flow models. In this " +
@@ -106,6 +126,7 @@ const publications = [
       "N. Lance Downing", "Arnold Milstein", "Li Fei-Fei"],
     "venue": "ML4H: Machine Learning for Health, NeurIPS 2018, Montreal, Canada, December 8, 2018",
     "thumbnail": "publications/darke2018vision.png",
+    "areas": ["Healthcare: Ambient Intelligence in Healthcare", "Activity Recognition", "3D Geometry"],
     "abstract": "As the senior population rapidly increases, it is challenging yet crucial to provide effective " +
       "long-term care for seniors who live at home or in senior care facilities. Smart senior homes, which have " +
       "gained widespread interest in the healthcare community, have been proposed to improve the well-being of " +
@@ -124,6 +145,7 @@ const publications = [
       "Jay Luxenberg", "Grace Li", "Li-Jia Li", "N. Lance Downing", "Arnold Milstein", "Li Fei-Fei"],
     "venue": "Machine Learning for Healthcare (MLHC) 2018, Stanford, CA, August 17-18, 2018",
     "thumbnail": "publications/luo2018computer.gif",
+    "areas": ["Activity Recognition", "Healthcare: Ambient Intelligence in Healthcare"],
     "abstract": "One in twenty-five patients admitted to a hospital will suffer from a hospital acquired infection. " +
       "If we can intelligently track healthcare staff, patients, and visitors, we can better understand the sources " +
       "of such infections. We envision a smart hospital capable of increasing operational efficiency and improving " +
@@ -142,6 +164,7 @@ const publications = [
     "authors": ["Zelun Luo", "Yuliang Zou", "Judy Hoffman", "Li Fei-Fei"],
     "venue": "Conference on Neural Information Processing Systems (NIPS) 2017",
     "thumbnail": "publications/luo2017label.png",
+    "areas": ["Activity Recognition", "Learning Paradigm: Transfer Learning"],
     "abstract": "We propose a framework that learns a representation transferable across different domains and tasks " +
       "in a data efficient manner. Our approach battles domain shift with a domain adversarial loss, and generalizes " +
       "the embedding to novel task using a metric learning-based approach. Our model is simultaneously optimized on " +
@@ -159,6 +182,7 @@ const publications = [
     "authors": ["Zelun Luo", "Boya Peng", "De-An Huang", "Alexandre Alahi", "Li Fei-Fei"],
     "venue": "Conference on Computer Vision and Pattern Recognition (CVPR) 2017",
     "thumbnail": "publications/luo2017unsupervised.png",
+    "areas": ["Activity Recognition", "Learning Paradigm: Self-Supervised Learning"],
     "abstract": "We present an unsupervised representation learning approach that compactly encodes the motion " +
       "dependencies in videos. Given a pair of images from a video clip, our framework learns to predict the " +
       "long-term 3D motions. To reduce the complexity of the learning framework, we propose to describe the motion " +
@@ -179,6 +203,7 @@ const publications = [
       "Li Fei-Fei"],
     "venue": "Machine Learning for Healthcare (MLHC) 2017, Boston, MA, August 18-19, 2017",
     "thumbnail": "publications/haque2017towards.png",
+    "areas": ["Healthcare: Ambient Intelligence in Healthcare", "Activity Recognition"],
     "abstract": "Nations around the world face rising demand for costly long-term care for seniors. Patterns in " +
       "seniors' activities of daily living, such as sleeping, sitting, standing, walking, etc. can provide " +
       "caregivers useful clues regarding seniors' health. As the senior population continues to grow worldwide, " +
@@ -201,6 +226,7 @@ const publications = [
     "authors": ["Zelun Luo", "Alisha Rege", "Guido Pusiol", "Arnold Milstein", "Li Fei-Fei", "N. Lance Downing"],
     "venue": "American Medical Informatics Association (AMIA), Washington, DC, November 4-8, 2017",
     "thumbnail": "publications/luo2017computer.png",
+    "areas": ["Healthcare: Ambient Intelligence in Healthcare", "Activity Recognition"],
     "abstract": "Recent progress in developing cost-effective sensors and machine learning techniques has enabled " +
       "new AI-assisted solutions for human behavior understanding. In this work, we investigate the use of thermal " +
       "and depth sensors for the detection of daily activities, lifestyle patterns, emotions, and vital signs, as " +
@@ -217,6 +243,7 @@ const publications = [
       "Anish Shah", "Roshan Patel", "Krishnarao Tangella", "Andre Kajdacsy-Balla", "Grace Guzman", "Gabriel Popescu"],
     "venue": "Journal of Biomedical Optics, Opt. 22(6), 2017",
     "thumbnail": "publications/kandel2017label.png",
+    "areas": ["Healthcare: Diagnostic Imaging"],
     "abstract": "The current practice of surgical pathology relies on external contrast agents to reveal tissue " +
       "architecture, which is then qualitatively examined by a trained pathologist. The diagnosis is based on the " +
       "comparison with standardized empirical, qualitative assessments of limited objectivity. We propose an " +
@@ -243,6 +270,7 @@ const publications = [
     "authors": ["Albert Haque", "Zelun Luo*", "Boya Peng*", "Alexandre Alahi", "Serena Yeung", "Li Fei-Fei"],
     "venue": "European Conference on Computer Vision (ECCV) 2016",
     "thumbnail": "publications/haque2016towards.gif",
+    "areas": ["Activity Recognition", "3D Geometry"],
     "abstract": "We propose a viewpoint invariant model for 3D human pose estimation from a single depth image. To " +
       "achieve this, our discriminative model embeds local regions into a learned viewpoint invariant feature space. " +
       "Formulated as a multi-task learning problem, our model is able to selectively predict partial poses in the " +
@@ -261,6 +289,7 @@ const publications = [
       "Krishnarao Tangella", "Andre Balla", "Minh N. Do", "Gabriel Popescu"],
     "venue": "United States and Canadian Academy of Pathology (USCAP), Seattle, WA, March 12-18, 2016",
     "thumbnail": "publications/majeed2016towards.png",
+    "areas": ["Healthcare: Diagnostic Imaging"],
     "abstract": "",
     "website": "https://light.ece.illinois.edu/index.html/publications/conferences"
   },
@@ -272,6 +301,7 @@ const publications = [
     "venue": ["American Medical Informatics Association (AMIA), Chicago, November 12-16, 2016",
       "NIPS Workshop on Machine Learning for Healthcare, 2015"],
     "thumbnail": "publications/yeung2015vision.png",
+    "areas": ["Healthcare: Ambient Intelligence in Healthcare", "Activity Recognition"],
     "abstract": "Recent progress in developing cost-effective depth sensors has enabled new AI-assisted solutions " +
       "such as assisted driving vehicles and smart spaces. Machine learning techniques have been successfully " +
       "applied on these depth signals to perceive meaningful information about human behavior. In this work, we " +
@@ -287,6 +317,7 @@ const publications = [
       "Krishnarao Tangella", "Andre Balla", "Gabriel Popescu"],
     "venue": "Journal of Biomedical Optics, Opt. 20(11), 2015",
     "thumbnail": "publications/majeed2015breast.png",
+    "areas": ["Healthcare: Diagnostic Imaging"],
     "abstract": "The standard practice in histopathology of breast cancers is to examine a hematoxylin and eosin " +
       "(H&E) stained tissue biopsy under a microscope to diagnose whether a lesion is benign or malignant. This " +
       "determination is made based on a manual, qualitative inspection, making it subject to investigator bias and " +
@@ -310,6 +341,7 @@ const publications = [
       "Krishnarao Tangella", "Gabriel Popescu"],
     "venue": "SPIE Photonics West: BiOS, San Francisco, CA, February 7-12, 2015",
     "thumbnail": "publications/majeed2015high.png",
+    "areas": ["Healthcare: Diagnostic Imaging"],
     "abstract": "While automated blood cell counters have made great progress in detecting abnormalities in blood, " +
       "the lack of specificity for a particular disease, limited information on single cell morphology and intrinsic " +
       "uncertainly due to high throughput in these instruments often necessitates detailed inspection in the form of " +
@@ -332,6 +364,7 @@ const publications = [
       "Krishnarao Tangella", "Andre Balla", "Gabriel Popescu"],
     "venue": "SPIE Photonics West: BiOS, San Francisco, CA, February 7-12, 2015",
     "thumbnail": "publications/majeed2015diagnosis.png",
+    "areas": ["Healthcare: Diagnostic Imaging"],
     "abstract": "The standard practice in the histopathology of breast cancers is to examine a hematoxylin and " +
       "eosin (H&E) stained tissue biopsy under a microscope. The pathologist looks at certain morphological " +
       "features, visible under the stain, to diagnose whether a tumor is benign or malignant. This determination " +
@@ -358,6 +391,7 @@ const publications = [
     "authors": ["Mikhail E. Kandel", "Zelun Luo", "Kevin Han", "Gabriel Popescu"],
     "venue": "SPIE Photonics West: BiOS, San Francisco, CA, February 7-12, 2015",
     "thumbnail": "publications/kandel2015cpp.png",
+    "areas": ["Healthcare: Diagnostic Imaging"],
     "abstract": "The multi-shot approach in SLIM requires reliable, synchronous, and parallel operation of three " +
       "independent hardware devices – not meeting these challenges results in degraded phase and slow acquisition " +
       "speeds, narrowing applications to holistic statements about complex phenomena. The relative youth of " +
@@ -376,50 +410,99 @@ const publications = [
 ]
 
 $(document).ready(function() {
-  $.each(publications, function(publication_index, publication) {
-    let authors = publication.authors.join(", ").replace("Zelun Luo", '<strong>$&</strong>');
-    let venue = $.isArray(publication.venue) ? publication.venue.join("<br>") : publication.venue;
-
-    let buttons =
-      $("<div/>", {"class": "btn-group btn-group-sm", "role": "group"}).append(
-        $("<button/>", {"class": "btn btn-outline-dark", "type": "button", "data-bs-toggle": "collapse",
-          "data-bs-target": "#collapse-abstract-"+publication_index, "aria-expanded": "false",
-          "aria-controls": "collapse-abstract", text: "Abstract"})
+  $("#papers").append(function() {
+    let buttons = $("<div/>", {"class": "nav nav-pills nav-fill"});
+    buttons.append(
+      $("<button/>", {"class": "nav-link nav-link-filter active", "data-filter": "all"}).append(
+        $("<i/>", {"class": "far fa-check-square me-2"}),
+        "All"
       )
-
-    $.each(["Manuscript", "Website", "Poster"], function(button_index, button_name) {
-      if (button_name.toLowerCase() in publication) {
-        buttons.append(
-          $("<a/>", {"class": "btn btn-outline-dark", "href": publication[button_name.toLowerCase()],
-            "target": "_blank", "role": "button", text: button_name})
+    );
+    $.each(areas, function(area_name, icon_class) {
+      buttons.append(
+        $("<button/>", {"class": "nav-link nav-link-filter", "data-filter": area_name.toLowerCase().replace(" ", "-")}).append(
+          $("<i/>", {"class": icon_class+" me-2"}),
+          area_name
         )
+      );
+    });
+    return buttons;
+  });
+
+  $(".nav-link-filter").click(function(){
+    console.log("hi");
+    let value = $(this).attr('data-filter');
+
+    if (value === "all") {
+      $('.paper').show('1000');
+    }
+    else
+    {
+      $(".paper").not('.'+value).hide('3000');
+      $('.paper').filter('.'+value).show('3000');
+    }
+  });
+
+  $.each(papers, function(paper_index, paper) {
+    let authors = paper.authors.join(", ").replace("Zelun Luo", '<strong>$&</strong>');
+    let venue = $.isArray(paper.venue) ? paper.venue.join("<br>") : paper.venue;
+
+    let links = $("<div/>", {"class": "btn-group btn-group-sm", "role": "group"});
+    $.each(resources, function(resource_name, icon_class) {
+      let key = resource_name.toLowerCase();
+      let button;
+
+      if (key === 'abstract') {
+        button =
+          $("<button/>", {"class": "btn btn-outline-dark", "type": "button", "data-bs-toggle": "collapse",
+          "data-bs-target": "#collapse-abstract-"+paper_index, "aria-expanded": "false",
+          "aria-controls": "collapse-abstract"});
+      } else if (key in paper) {
+        button =
+          $("<a/>", {"class": "btn btn-outline-dark", "type": "button", "href": paper[key], "target": "_blank"});
+      } else {
+        return;
       }
+
+      links.append(
+        button.append(
+          $("<i/>", {"class": icon_class+" me-2"}),
+          resource_name
+        )
+      );
+    });
+
+    let paper_class = " paper";
+    $.each(paper.areas, function(area_index, area_name) {
+      area_name = area_name.split(": ")[0];
+      paper_class += " "+area_name.toLowerCase().replace(" ", "-");
     });
 
     $("#papers").append(
-      $("<div/>", {"class": "row m-4 border rounded shadow align-items-center publication"}).append(
-        $("<div/>", {"class": "col-sm-3 col-sm-offset-0 col-xs-offset-2 col-xs-8 p-4"}).append(
-          $("<img/>", {"class": "img-fluid", src: publication.thumbnail})
-        )
-      ).append(
-        $("<div/>", {"class": "col-sm-9 col-xs-12 text-sm-start p-4"}).append(
-          $("<h5/>", {text: publication.title})
-        ).append(
-          $("<p/>", {html: authors+"<br>"+venue})
-        ).append(
-          buttons
-        ).append(
-          $("<div/>", {"class": "collapse mt-2", id: "collapse-abstract-"+publication_index}).append(
+      $("<div/>", {"class": "row m-4 border rounded shadow justify-content-center align-items-center p-4"+paper_class}).append(
+        $("<div/>", {"class": "col-md-3 col-8 text-center my-3"}).append(
+          $("<img/>", {"class": "img-fluid", src: paper.thumbnail})
+        ),
+        $("<div/>", {"class": "col-md-9 col-12 text-md-start text-center"}).append(
+          $("<p/>", {text: paper.title}),
+          $("<p/>").append(
+            $("<small/>").append(
+              authors,
+              "<br>",
+              venue
+            )
+          ),
+          links,
+          $("<div/>", {"class": "collapse mt-2", id: "collapse-abstract-"+paper_index}).append(
             $("<div/>", {"class": "card border-dark"}).append(
-              $("<div/>", {"class": "card-header text-center", text: "Abstract"})
-            ).append(
+              $("<div/>", {"class": "card-header text-center", text: "Abstract"}),
               $("<div/>", {"class": "card-body"}).append(
-                $("<p/>", {"class": "card-text", text: publication.abstract})
+                $("<p/>", {"class": "card-text", text: paper.abstract})
               )
             )
           )
         )
       )
-    )
+    );
   });
 });

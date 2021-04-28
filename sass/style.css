@@ -5,12 +5,42 @@
   background-size: cover !important;
   min-height: 100vh !important;
 }
-#intro .my-info {
+
+.bg-trans {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-a {
-  text-decoration: none !important;
+.container-md {
+  max-width: 960px;
+}
+
+h1 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 180px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 90px);
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #0563bb;
+  bottom: 0;
+  left: calc(50% - 30px);
 }
 
 /*# sourceMappingURL=style.css.map */
