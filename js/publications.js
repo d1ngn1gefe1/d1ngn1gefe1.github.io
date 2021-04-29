@@ -428,99 +428,64 @@ $.each(papers, function(paper_index, paper) {
 });
 
 $(document).ready(function() {
-  // $("#papers").append(
-  //   $("<div/>", {"class": "btn-group btn-group-sm w-100", "role": "group"}).append(
-  //     $("<input/>", {"class": "btn-check", "type": "radio", "name": "btnradio", "id": "btnradio0", "autocomplete": "off", "checked": "checked"}),
-  //     $("<label/>", {"class": "btn btn-outline-primary", "for": "btnradio0"}).append(
-  //       $("<i/>", {"class": "far fa-check-square me-2"}),
-  //       "All"
-  //     )
-  //   ).append(function() {
-  //     let other_buttons = [];
-  //     let i = 1;
-  //     $.each(areas, function(area_name, icon_class) {
-  //       if (area_name in subareas) {
-  //         other_buttons.push(
-  //           $("<div/>", {"class": "btn-group btn-group-sm", "role": "group"}).append(
-  //             $("<button/>", {"class": "btn btn-outline-primary dropdown-toggle", "type": "button", "id": "dropdown"+i, "data-bs-toggle": "dropdown", "aria-expanded": "false"}).append(
-  //               $("<i/>", {"class": icon_class+" me-2"}),
-  //               area_name
-  //             ),
-  //             $("<ul/>", {"class": "dropdown-menu", "aria-labelledby": "dropdown"+i}).append(function() {
-  //               $("<li/>", {"text": "hi1"})
-  //             })
-  //           )
-  //         );
-  //       } else {
-  //         other_buttons.push(
-  //           $("<input/>", {"class": "btn-check", "type": "radio", "name": "btnradio", "id": "btnradio"+i, "autocomplete": "off"}),
-  //           $("<label/>", {"class": "btn btn-outline-primary", "for": "btnradio"+i}).append(
-  //             $("<i/>", {"class": icon_class+" me-2"}),
-  //             area_name
-  //           )
-  //         );
-  //       }
-  //       i++;
-  //     });
-  //     return other_buttons;
-  //   })
-  // );
+  // add filter buttons
+  $("#papers").append(function() {
+    let nav_papers = $("<nav/>", {"class": "nav nav-pills nav-fill"});
+    nav_papers.append(
+      $("<li/>", {"class": "nav-item"}).append(
+        $("<a/>", {"class": "nav-link nav-link-filter active", "data-filter": "all"}).append(
+          $("<i/>", {"class": "far fa-check-square me-2"}),
+          "All"
+        )
+      )
+    );
+    $.each(areas, function(area_name, icon_class) {
+      nav_papers.append(
+        $("<li/>", {"class": "nav-item"}).append(function() {
+          if (area_name in subareas) {
+            let dropdown_button = $("<a/>", {"class": "nav-link dropdown-toggle nav-link-filter", "data-bs-toggle": "dropdown", "role": "button", "aria-expanded": "false", "data-filter": area_name.toLowerCase().replace(" ", "-")}).append(
+              $("<i/>", {"class": icon_class+" me-2"}),
+              area_name
+            );
+            let dropdown_menu = $("<ul/>", {"class": "dropdown-menu"});
+            $.each(subareas[area_name], function(subarea_index, subarea_name) {
+              dropdown_menu.append(
+                $("<li/>").append(
+                  $("<a/>", {"class": "dropdown-item", "text": subarea_name})
+                )
+              )
+            });
+            return [dropdown_button, dropdown_menu]
+          } else {
+            return $("<a/>", {"class": "nav-link nav-link-filter", "data-filter": area_name.toLowerCase().replace(" ", "-")}).append(
+                     $("<i/>", {"class": icon_class+" me-2"}),
+                     area_name
+                   );
+          }
+        })
+      );
+    });
+    return nav_papers;
+  });
 
-  // $("#papers").append(function() {
-  //   let nav_papers = $("<nav/>", {"class": "nav nav-pills"});
-  //   nav_papers.append(
-  //     $("<li/>", {"class": "nav-item"}).append(
-  //       $("<a/>", {"class": "nav-link nav-link-filter active", "data-filter": "all"}).append(
-  //         $("<i/>", {"class": "far fa-check-square me-2"}),
-  //         "All"
-  //       )
-  //     )
-  //   );
-  //   $.each(areas, function(area_name, icon_class) {
-  //     nav_papers.append(
-  //       $("<li/>", {"class": "nav-item"}).append(function() {
-  //         if (area_name in subareas) {
-  //           let dropdown_button = $("<a/>", {"class": "nav-link dropdown-toggle nav-link-filter", "data-bs-toggle": "dropdown", "role": "button", "aria-expanded": "false", "data-filter": area_name.toLowerCase().replace(" ", "-")}).append(
-  //             $("<i/>", {"class": icon_class+" me-2"}),
-  //             area_name
-  //           );
-  //           let dropdown_menu = $("<ul/>", {"class": "dropdown-menu"});
-  //           $.each(subareas[area_name], function(subarea_index, subarea_name) {
-  //             dropdown_menu.append(
-  //               $("<li/>").append(
-  //                 $("<a/>", {"class": "dropdown-item", "text": subarea_name})
-  //               )
-  //             )
-  //           });
-  //           return [dropdown_button, dropdown_menu]
-  //         } else {
-  //           return $("<a/>", {"class": "nav-link nav-link-filter", "data-filter": area_name.toLowerCase().replace(" ", "-")}).append(
-  //                    $("<i/>", {"class": icon_class+" me-2"}),
-  //                    area_name
-  //                  );
-  //         }
-  //       })
-  //     );
-  //   });
-  //   return nav_papers;
-  // });
+  // handle click events
+  $(".nav-link-filter").click(function(){
+    let value = $(this).attr('data-filter');
 
-  // $(".nav-link-filter").click(function(){
-  //   let value = $(this).attr('data-filter');
-  //
-  //   if (value === "all") {
-  //     $('.paper').show('1000');
-  //   } else {
-  //     $(".paper").not('.'+value).hide('3000');
-  //     $('.paper').filter('.'+value).show('3000');
-  //   }
-  //
-  //   if ($(".nav-link-filter").removeClass("active")) {
-  //     $(this).removeClass("active");
-  //   }
-  //   $(this).addClass("active");
-  // });
+    if (value === "all") {
+      $('.paper').show('1000');
+    } else {
+      $(".paper").not('.'+value).hide('3000');
+      $('.paper').filter('.'+value).show('3000');
+    }
 
+    if ($(".nav-link-filter").removeClass("active")) {
+      $(this).removeClass("active");
+    }
+    $(this).addClass("active");
+  });
+
+  // add papers
   $.each(papers, function(paper_index, paper) {
     let authors = paper.authors.join(", ").replace("Zelun Luo", '<strong>$&</strong>');
     let venue = $.isArray(paper.venue) ? paper.venue.join("<br>") : paper.venue;

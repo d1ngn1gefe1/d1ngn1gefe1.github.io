@@ -1,17 +1,27 @@
 /* sass --watch style.scss:style.css */
 
+.container-md {
+  max-width: 960px;
+}
+
 #intro {
   background: url("../intro/bg.jpg");
   background-position: center !important;
   background-size: cover !important;
+
+  a {
+    &:link, &:visited, &:active {
+      color: white;
+    }
+
+    &:hover {
+      color: beige;
+    }
+  }
 }
 
 .bg-trans {
   background-color: rgba(0, 0, 0, .7);
-}
-
-.container-md {
-  max-width: 960px;
 }
 
 h1.section-title {
