@@ -3,7 +3,6 @@
   background: url("../intro/bg.jpg");
   background-position: center !important;
   background-size: cover !important;
-  min-height: 100vh !important;
 }
 
 .bg-trans {
@@ -14,14 +13,13 @@
   max-width: 960px;
 }
 
-h1 {
+h1.section-title {
   text-transform: uppercase;
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
 }
-
-h1::before {
+h1.section-title:before {
   content: "";
   position: absolute;
   display: block;
@@ -31,8 +29,7 @@ h1::before {
   bottom: 1px;
   left: calc(50% - 90px);
 }
-
-h1::after {
+h1.section-title:after {
   content: "";
   position: absolute;
   display: block;
@@ -41,6 +38,17 @@ h1::after {
   background: #0563bb;
   bottom: 0;
   left: calc(50% - 30px);
+}
+
+#articles img {
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+#articles img:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=style.css.map */

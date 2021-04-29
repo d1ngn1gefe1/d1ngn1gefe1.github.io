@@ -33,16 +33,16 @@ const companies = [
     "time": "Summer 2015",
     "thumbnail": "about/yahoo.png"
   },
-]
-
-
+];
 
 $(document).ready(function() {
   $.each(companies, function(company_index, company) {
     $("#companies").append(
-      $("<div/>", {"class": "col-sm-4 col-xs-6 text-center"}).append(
-        $("<img/>", {"class": "my-2 rounded-circle", "src": company.thumbnail, "width": 150, "height": 150}),
-        $("<p/>").append(
+      $("<div/>", {"class": "col-12 col-sm-6 col-md-4"}).append(
+        $("<div/>", {"class": "col-4 offset-4 col-md-6 offset-md-3"}).append(
+          $("<img/>", {"class": "img-fluid my-2 rounded-circle", "src": company.thumbnail})
+        ),
+        $("<p/>", {"class": "text-center text-nowrap"}).append(
           company.name,
           "<br>",
           $("<small/>").append(

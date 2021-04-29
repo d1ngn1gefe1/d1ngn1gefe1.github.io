@@ -4,8 +4,6 @@
   background: url("../intro/bg.jpg");
   background-position: center !important;
   background-size: cover !important;
-
-  min-height: 100vh !important;
 }
 
 .bg-trans {
@@ -16,32 +14,45 @@
   max-width: 960px;
 }
 
-
-h1 {
+h1.section-title {
   text-transform: uppercase;
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 180px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 90px);
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #0563bb;
+    bottom: 0;
+    left: calc(50% - 30px);
+  }
 }
 
-h1::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 180px;
-  height: 1px;
-  background: #ddd;
-  bottom: 1px;
-  left: calc(50% - 90px);
-}
+#articles {
+  img {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
 
-h1::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: #0563bb;
-  bottom: 0;
-  left: calc(50% - 30px);
+  img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 }

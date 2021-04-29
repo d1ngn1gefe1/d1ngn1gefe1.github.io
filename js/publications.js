@@ -1,18 +1,3 @@
-const areas = {
-  "Activity Recognition": "fas fa-running",
-  "Healthcare": "fas fa-laptop-medical",
-  "Learning Paradigm": "fas fa-bezier-curve",
-  "Trustworthy AI": "fas fa-balance-scale",
-  "3D Geometry": "fas fa-shapes"
-}
-
-const resources = {
-  "Abstract": "fas fa-list",
-  "Manuscript": "far fa-clipboard",
-  "Poster": "far fa-image",
-  "Website": "fas fa-globe-americas"
-}
-
 const papers = [
   {
     "title": "MOMA: Multi-Object Multi-Actor Activity Parsing",
@@ -407,41 +392,134 @@ const papers = [
     "manuscript": "https://doi.org/10.1117/12.2080212",
     "website": "https://experts.illinois.edu/en/publications/c-software-integration-for-a-high-throughput-phase-imaging-platfo"
   }
-]
+];
+
+// areas and icons
+const areas = {
+  "Activity Recognition": "fas fa-running",
+  "Healthcare": "fas fa-laptop-medical",
+  "Learning Paradigm": "fas fa-bezier-curve",
+  "Trustworthy AI": "fas fa-balance-scale",
+  "3D Geometry": "fas fa-shapes"
+};
+
+// resources/links and icons
+const resources = {
+  "Abstract": "fas fa-list",
+  "Manuscript": "far fa-clipboard",
+  "Poster": "far fa-image",
+  "Website": "fas fa-globe-americas"
+};
+
+// subareas (if any) of areas
+let subareas = {};
+$.each(papers, function(paper_index, paper) {
+  $.each(paper.areas, function(area_index, area) {
+    let area_split = area.split(": ");
+    if (area_split.length === 2) {
+      let [area_name, subarea_name] = area_split
+      if (!(area_name in subareas)) {
+        subareas[area_name] = [subarea_name];
+      } else if (!subareas[area_name].includes(subarea_name)) {
+        subareas[area_name].push(subarea_name);
+      }
+    }
+  });
+});
 
 $(document).ready(function() {
-  $("#papers").append(function() {
-    let buttons = $("<div/>", {"class": "nav nav-pills nav-fill"});
-    buttons.append(
-      $("<button/>", {"class": "nav-link nav-link-filter active", "data-filter": "all"}).append(
-        $("<i/>", {"class": "far fa-check-square me-2"}),
-        "All"
-      )
-    );
-    $.each(areas, function(area_name, icon_class) {
-      buttons.append(
-        $("<button/>", {"class": "nav-link nav-link-filter", "data-filter": area_name.toLowerCase().replace(" ", "-")}).append(
-          $("<i/>", {"class": icon_class+" me-2"}),
-          area_name
-        )
-      );
-    });
-    return buttons;
-  });
+  // $("#papers").append(
+  //   $("<div/>", {"class": "btn-group btn-group-sm w-100", "role": "group"}).append(
+  //     $("<input/>", {"class": "btn-check", "type": "radio", "name": "btnradio", "id": "btnradio0", "autocomplete": "off", "checked": "checked"}),
+  //     $("<label/>", {"class": "btn btn-outline-primary", "for": "btnradio0"}).append(
+  //       $("<i/>", {"class": "far fa-check-square me-2"}),
+  //       "All"
+  //     )
+  //   ).append(function() {
+  //     let other_buttons = [];
+  //     let i = 1;
+  //     $.each(areas, function(area_name, icon_class) {
+  //       if (area_name in subareas) {
+  //         other_buttons.push(
+  //           $("<div/>", {"class": "btn-group btn-group-sm", "role": "group"}).append(
+  //             $("<button/>", {"class": "btn btn-outline-primary dropdown-toggle", "type": "button", "id": "dropdown"+i, "data-bs-toggle": "dropdown", "aria-expanded": "false"}).append(
+  //               $("<i/>", {"class": icon_class+" me-2"}),
+  //               area_name
+  //             ),
+  //             $("<ul/>", {"class": "dropdown-menu", "aria-labelledby": "dropdown"+i}).append(function() {
+  //               $("<li/>", {"text": "hi1"})
+  //             })
+  //           )
+  //         );
+  //       } else {
+  //         other_buttons.push(
+  //           $("<input/>", {"class": "btn-check", "type": "radio", "name": "btnradio", "id": "btnradio"+i, "autocomplete": "off"}),
+  //           $("<label/>", {"class": "btn btn-outline-primary", "for": "btnradio"+i}).append(
+  //             $("<i/>", {"class": icon_class+" me-2"}),
+  //             area_name
+  //           )
+  //         );
+  //       }
+  //       i++;
+  //     });
+  //     return other_buttons;
+  //   })
+  // );
 
-  $(".nav-link-filter").click(function(){
-    console.log("hi");
-    let value = $(this).attr('data-filter');
+  // $("#papers").append(function() {
+  //   let nav_papers = $("<nav/>", {"class": "nav nav-pills"});
+  //   nav_papers.append(
+  //     $("<li/>", {"class": "nav-item"}).append(
+  //       $("<a/>", {"class": "nav-link nav-link-filter active", "data-filter": "all"}).append(
+  //         $("<i/>", {"class": "far fa-check-square me-2"}),
+  //         "All"
+  //       )
+  //     )
+  //   );
+  //   $.each(areas, function(area_name, icon_class) {
+  //     nav_papers.append(
+  //       $("<li/>", {"class": "nav-item"}).append(function() {
+  //         if (area_name in subareas) {
+  //           let dropdown_button = $("<a/>", {"class": "nav-link dropdown-toggle nav-link-filter", "data-bs-toggle": "dropdown", "role": "button", "aria-expanded": "false", "data-filter": area_name.toLowerCase().replace(" ", "-")}).append(
+  //             $("<i/>", {"class": icon_class+" me-2"}),
+  //             area_name
+  //           );
+  //           let dropdown_menu = $("<ul/>", {"class": "dropdown-menu"});
+  //           $.each(subareas[area_name], function(subarea_index, subarea_name) {
+  //             dropdown_menu.append(
+  //               $("<li/>").append(
+  //                 $("<a/>", {"class": "dropdown-item", "text": subarea_name})
+  //               )
+  //             )
+  //           });
+  //           return [dropdown_button, dropdown_menu]
+  //         } else {
+  //           return $("<a/>", {"class": "nav-link nav-link-filter", "data-filter": area_name.toLowerCase().replace(" ", "-")}).append(
+  //                    $("<i/>", {"class": icon_class+" me-2"}),
+  //                    area_name
+  //                  );
+  //         }
+  //       })
+  //     );
+  //   });
+  //   return nav_papers;
+  // });
 
-    if (value === "all") {
-      $('.paper').show('1000');
-    }
-    else
-    {
-      $(".paper").not('.'+value).hide('3000');
-      $('.paper').filter('.'+value).show('3000');
-    }
-  });
+  // $(".nav-link-filter").click(function(){
+  //   let value = $(this).attr('data-filter');
+  //
+  //   if (value === "all") {
+  //     $('.paper').show('1000');
+  //   } else {
+  //     $(".paper").not('.'+value).hide('3000');
+  //     $('.paper').filter('.'+value).show('3000');
+  //   }
+  //
+  //   if ($(".nav-link-filter").removeClass("active")) {
+  //     $(this).removeClass("active");
+  //   }
+  //   $(this).addClass("active");
+  // });
 
   $.each(papers, function(paper_index, paper) {
     let authors = paper.authors.join(", ").replace("Zelun Luo", '<strong>$&</strong>');
@@ -479,11 +557,11 @@ $(document).ready(function() {
     });
 
     $("#papers").append(
-      $("<div/>", {"class": "row m-4 border rounded shadow justify-content-center align-items-center p-4"+paper_class}).append(
-        $("<div/>", {"class": "col-md-3 col-8 text-center my-3"}).append(
+      $("<div/>", {"class": "row border rounded shadow justify-content-center align-items-center m-4 p-4"+paper_class}).append(
+        $("<div/>", {"class": "col-6 col-md-3 text-center my-3"}).append(
           $("<img/>", {"class": "img-fluid", src: paper.thumbnail})
         ),
-        $("<div/>", {"class": "col-md-9 col-12 text-md-start text-center"}).append(
+        $("<div/>", {"class": "col-12 col-md-9 text-md-start text-center"}).append(
           $("<p/>", {text: paper.title}),
           $("<p/>").append(
             $("<small/>").append(
