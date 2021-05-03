@@ -34,7 +34,7 @@ const papers = [
       "datasets and shallow networks, while recent transfer learning-based DP methods often make unrealistic " +
       "assumptions about the availability and distribution of public data. In this work, we argue that minimizing " +
       "the number of trainable parameters is the key to improving the privacy-performance tradeoff of DP on complex " +
-      "visual recognition tasks. We also propose a novel transfer learning paradigm that finetunes a very sparse " +
+      "visual recognition tasks. We also propose a novel transfer Annotation-Efficient Learning that finetunes a very sparse " +
       "subnetwork with DP, inspired by this argument. We conduct extensive experiments and ablation studies on two " +
       "visual recognition tasks: CIFAR-100 -> CIFAR-10 (standard DP setting) and the CD-FSL challenge (few-shot, " +
       "multiple levels of domain shifts) and demonstrate competitive experimental performance."
@@ -66,7 +66,7 @@ const papers = [
     "authors": ["Zelun Luo", "Jun-Ting Hsieh", "Lu Jiang", "Juan Carlos Niebles", "Li Fei-Fei"],
     "venue": "European Conference on Computer Vision (ECCV) 2018",
     "thumbnail": "publications/luo2018graph.png",
-    "areas": ["Learning Paradigm: Learning Using Privileged Information (LUPI)", "Activity Recognition"],
+    "areas": ["Annotation-Efficient Learning: Learning Using Privileged Information (LUPI)", "Activity Recognition"],
     "abstract": "In this work, we propose a technique that tackles the video understanding problem under a " +
       "realistic, demanding condition in which we have limited labeled data and partially observed training " +
       "modalities. Common methods such as transfer learning do not take advantage of the rich information from extra " +
@@ -89,7 +89,7 @@ const papers = [
     "authors": ["Yuliang Zou", "Zelun Luo", "Jia-Bin Huang"],
     "venue": "European Conference on Computer Vision (ECCV) 2018",
     "thumbnail": "publications/zou2018dfnet.gif",
-    "areas": ["Learning Paradigm: Self-Supervised Learning", "3D Geometry"],
+    "areas": ["Annotation-Efficient Learning: Self-Supervised Learning"],
     "abstract": "We present an unsupervised learning framework for simultaneously training single-view depth " +
       "prediction and optical flow estimation models using unlabeled video sequences. Existing unsupervised methods " +
       "often exploit brightness constancy and spatial smoothness priors to train depth or flow models. In this " +
@@ -111,7 +111,7 @@ const papers = [
       "N. Lance Downing", "Arnold Milstein", "Li Fei-Fei"],
     "venue": "ML4H: Machine Learning for Health, NeurIPS 2018, Montreal, Canada, December 8, 2018",
     "thumbnail": "publications/darke2018vision.png",
-    "areas": ["Healthcare: Ambient Intelligence in Healthcare", "Activity Recognition", "3D Geometry"],
+    "areas": ["Healthcare: Ambient Intelligence in Healthcare", "Activity Recognition"],
     "abstract": "As the senior population rapidly increases, it is challenging yet crucial to provide effective " +
       "long-term care for seniors who live at home or in senior care facilities. Smart senior homes, which have " +
       "gained widespread interest in the healthcare community, have been proposed to improve the well-being of " +
@@ -149,7 +149,7 @@ const papers = [
     "authors": ["Zelun Luo", "Yuliang Zou", "Judy Hoffman", "Li Fei-Fei"],
     "venue": "Conference on Neural Information Processing Systems (NIPS) 2017",
     "thumbnail": "publications/luo2017label.png",
-    "areas": ["Activity Recognition", "Learning Paradigm: Transfer Learning"],
+    "areas": ["Activity Recognition", "Annotation-Efficient Learning: Transfer Learning"],
     "abstract": "We propose a framework that learns a representation transferable across different domains and tasks " +
       "in a data efficient manner. Our approach battles domain shift with a domain adversarial loss, and generalizes " +
       "the embedding to novel task using a metric learning-based approach. Our model is simultaneously optimized on " +
@@ -167,7 +167,7 @@ const papers = [
     "authors": ["Zelun Luo", "Boya Peng", "De-An Huang", "Alexandre Alahi", "Li Fei-Fei"],
     "venue": "Conference on Computer Vision and Pattern Recognition (CVPR) 2017",
     "thumbnail": "publications/luo2017unsupervised.png",
-    "areas": ["Activity Recognition", "Learning Paradigm: Self-Supervised Learning"],
+    "areas": ["Activity Recognition", "Annotation-Efficient Learning: Self-Supervised Learning"],
     "abstract": "We present an unsupervised representation learning approach that compactly encodes the motion " +
       "dependencies in videos. Given a pair of images from a video clip, our framework learns to predict the " +
       "long-term 3D motions. To reduce the complexity of the learning framework, we propose to describe the motion " +
@@ -255,7 +255,7 @@ const papers = [
     "authors": ["Albert Haque", "Zelun Luo*", "Boya Peng*", "Alexandre Alahi", "Serena Yeung", "Li Fei-Fei"],
     "venue": "European Conference on Computer Vision (ECCV) 2016",
     "thumbnail": "publications/haque2016towards.gif",
-    "areas": ["Activity Recognition", "3D Geometry"],
+    "areas": ["Activity Recognition"],
     "abstract": "We propose a viewpoint invariant model for 3D human pose estimation from a single depth image. To " +
       "achieve this, our discriminative model embeds local regions into a learned viewpoint invariant feature space. " +
       "Formulated as a multi-task learning problem, our model is able to selectively predict partial poses in the " +
@@ -394,34 +394,34 @@ const papers = [
   }
 ];
 
-// areas and icons
-const areas = {
+// areas -> icons
+const area_icons = {
   "Activity Recognition": "fas fa-running",
   "Healthcare": "fas fa-laptop-medical",
-  "Learning Paradigm": "fas fa-bezier-curve",
-  "Trustworthy AI": "fas fa-balance-scale",
-  "3D Geometry": "fas fa-shapes"
+  "Annotation-Efficient Learning": "fas fa-user-clock",
+  "Trustworthy AI": "fas fa-balance-scale"
 };
 
-// resources/links and icons
-const resources = {
+// resources/links -> icons
+const resource_icons = {
   "Abstract": "fas fa-list",
   "Manuscript": "far fa-clipboard",
   "Poster": "far fa-image",
   "Website": "fas fa-globe-americas"
 };
 
-// subareas (if any) of areas
+// areas -> subareas
 let subareas = {};
 $.each(papers, function(paper_index, paper) {
   $.each(paper.areas, function(area_index, area) {
     let area_split = area.split(": ");
     if (area_split.length === 2) {
-      let [area_name, subarea_name] = area_split
-      if (!(area_name in subareas)) {
-        subareas[area_name] = [subarea_name];
-      } else if (!subareas[area_name].includes(subarea_name)) {
-        subareas[area_name].push(subarea_name);
+      let [area_name, subarea_name] = area_split;
+      let area_tag = area_name.toLowerCase().replaceAll(" ", "-");
+      if (!(area_tag in subareas)) {
+        subareas[area_tag] = [subarea_name];
+      } else if (!subareas[area_tag].includes(subarea_name)) {
+        subareas[area_tag].push(subarea_name);
       }
     }
   });
@@ -439,30 +439,15 @@ $(document).ready(function() {
         )
       )
     );
-    $.each(areas, function(area_name, icon_class) {
+    $.each(area_icons, function(area_name, icon_class) {
+      let area_tag = area_name.toLowerCase().replaceAll(" ", "-");
       nav_papers.append(
-        $("<li/>", {"class": "nav-item"}).append(function() {
-          if (area_name in subareas) {
-            let dropdown_button = $("<a/>", {"class": "nav-link dropdown-toggle nav-link-filter", "data-bs-toggle": "dropdown", "role": "button", "aria-expanded": "false", "data-filter": area_name.toLowerCase().replace(" ", "-")}).append(
-              $("<i/>", {"class": icon_class+" me-2"}),
-              area_name
-            );
-            let dropdown_menu = $("<ul/>", {"class": "dropdown-menu"});
-            $.each(subareas[area_name], function(subarea_index, subarea_name) {
-              dropdown_menu.append(
-                $("<li/>").append(
-                  $("<a/>", {"class": "dropdown-item", "text": subarea_name})
-                )
-              )
-            });
-            return [dropdown_button, dropdown_menu]
-          } else {
-            return $("<a/>", {"class": "nav-link nav-link-filter", "data-filter": area_name.toLowerCase().replace(" ", "-")}).append(
-                     $("<i/>", {"class": icon_class+" me-2"}),
-                     area_name
-                   );
-          }
-        })
+        $("<li/>", {"class": "nav-item"}).append(
+          $("<a/>", {"class": "nav-link nav-link-filter", "data-filter": area_tag}).append(
+            $("<i/>", {"class": icon_class+" me-2"}),
+            area_name
+          )
+        )
       );
     });
     return nav_papers;
@@ -470,13 +455,18 @@ $(document).ready(function() {
 
   // handle click events
   $(".nav-link-filter").click(function(){
-    let value = $(this).attr('data-filter');
+    let value = $(this).attr("data-filter");
+    let paper = $(".paper");
 
+    // show/hide papers and subarea badges
     if (value === "all") {
-      $('.paper').show('1000');
+      paper.show("1000");
+      paper.find(".badge").hide();
+      paper.find(".badge").hide();
     } else {
-      $(".paper").not('.'+value).hide('3000');
-      $('.paper').filter('.'+value).show('3000');
+      paper.not("."+value).hide("3000");
+      paper.filter("."+value).show("3000");
+      paper.find(".badge").show();
     }
 
     if ($(".nav-link-filter").removeClass("active")) {
@@ -487,11 +477,11 @@ $(document).ready(function() {
 
   // add papers
   $.each(papers, function(paper_index, paper) {
-    let authors = paper.authors.join(", ").replace("Zelun Luo", '<strong>$&</strong>');
+    let authors = paper.authors.join(", ").replaceAll("Zelun Luo", '<strong>$&</strong>');
     let venue = $.isArray(paper.venue) ? paper.venue.join("<br>") : paper.venue;
 
-    let links = $("<div/>", {"class": "btn-group btn-group-sm", "role": "group"});
-    $.each(resources, function(resource_name, icon_class) {
+    let links = $("<div/>", {"class": "btn-group btn-group-sm d-grid gap-2 col-6 mx-auto d-sm-block col-sm-12", "role": "group", "aria-label": "links"});
+    $.each(resource_icons, function(resource_name, icon_class) {
       let key = resource_name.toLowerCase();
       let button;
 
@@ -515,11 +505,12 @@ $(document).ready(function() {
       );
     });
 
-    let paper_class = " paper";
-    $.each(paper.areas, function(area_index, area_name) {
-      area_name = area_name.split(": ")[0];
-      paper_class += " "+area_name.toLowerCase().replace(" ", "-");
+    let paper_class = [" paper"];
+    $.each(paper.areas, function(area_index, area) {
+      let area_split = area.split(": ");
+      paper_class.push(area_split[0].toLowerCase().replaceAll(" ", "-"));
     });
+    paper_class = paper_class.join(" ");
 
     $("#papers").append(
       $("<div/>", {"class": "row border rounded shadow justify-content-center align-items-center m-4 p-4"+paper_class}).append(
@@ -527,6 +518,16 @@ $(document).ready(function() {
           $("<img/>", {"class": "img-fluid", src: paper.thumbnail})
         ),
         $("<div/>", {"class": "col-12 col-md-9 text-md-start text-center"}).append(
+          function () {
+            let badges = []
+            $.each(paper.areas, function(area_index, area) {
+              let area_split = area.split(": ");
+              if (area_split.length === 2) {
+                badges.push($("<span/>", {"class": "badge bg-primary mb-1 me-1", text: area_split[1]}).css({"display": "none"}));
+              }
+            });
+            return badges;
+          },
           $("<p/>", {text: paper.title}),
           $("<p/>").append(
             $("<small/>").append(
