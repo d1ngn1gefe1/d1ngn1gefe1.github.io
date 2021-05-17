@@ -4,10 +4,18 @@
   max-width: 960px;
 }
 
+body {
+  font-family: "Inter", sans-serif !important;
+}
+
 #intro {
   background: url("../intro/bg.jpg");
   background-position: center !important;
   background-size: cover !important;
+
+  .bg-trans {
+    background-color: rgba(0, 0, 0, .7);
+  }
 
   a {
     &:link, &:visited, &:active {
@@ -15,14 +23,37 @@
     }
 
     &:hover {
-      color: beige;
+      color: lightskyblue;
     }
   }
 }
 
-.bg-trans {
-  background-color: rgba(0, 0, 0, .7);
+#about {
+  #articles {
+    img {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8);
+      -webkit-transition: .3s ease-in-out;
+      transition: .3s ease-in-out;
+    }
+
+    img:hover {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+  }
 }
+
+#publications {
+  .badge {
+    font-size: 0.6rem;
+  }
+
+  .btn-sm {
+    font-size: 0.75rem;
+  }
+}
+
 
 h1.section-title {
   text-transform: uppercase;
@@ -50,19 +81,5 @@ h1.section-title {
     background: #0563bb;
     bottom: 0;
     left: calc(50% - 30px);
-  }
-}
-
-#articles {
-  img {
-    -webkit-transform: scale(0.8);
-    transform: scale(0.8);
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
-  }
-
-  img:hover {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
   }
 }

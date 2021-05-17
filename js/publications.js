@@ -464,7 +464,7 @@ $.each(papers, function(paper_index, paper) {
 $(document).ready(function() {
   // add filter buttons
   $("#papers").append(function() {
-    let nav_papers = $("<nav/>", {"class": "nav nav-pills nav-fill"});
+    let nav_papers = $("<nav/>", {"class": "nav nav-pills nav-fill flex-column flex-md-row"});
     nav_papers.append(
       $("<li/>", {"class": "nav-item"}).append(
         $("<a/>", {"class": "nav-link nav-link-filter active", "data-filter": "all"}).append(
@@ -514,19 +514,19 @@ $(document).ready(function() {
     let authors = paper.authors.join(", ").replaceAll("Zelun Luo", '<strong>$&</strong>').replaceAll("Alan Luo", '<strong>$&</strong>');
     let venue = $.isArray(paper.venue) ? paper.venue.join("<br>") : paper.venue;
 
-    let links = $("<div/>", {"class": "btn-group btn-group-sm d-grid gap-2 col-6 mx-auto d-sm-block col-sm-12", "role": "group", "aria-label": "links"});
+    let links = $("<div/>", {"class": "d-grid gap-2 col-6 mx-auto d-md-block col-md-12"});
     $.each(resource_icons, function(resource_name, icon_class) {
       let key = resource_name.toLowerCase();
       let button;
 
       if (key === 'abstract') {
         button =
-          $("<button/>", {"class": "btn btn-outline-dark", "type": "button", "data-bs-toggle": "collapse",
+          $("<button/>", {"class": "btn btn-outline-dark btn-sm me-md-1", "type": "button", "data-bs-toggle": "collapse",
           "data-bs-target": "#collapse-abstract-"+paper_index, "aria-expanded": "false",
           "aria-controls": "collapse-abstract"});
       } else if (key in paper) {
         button =
-          $("<a/>", {"class": "btn btn-outline-dark", "type": "button", "href": paper[key], "target": "_blank"});
+          $("<a/>", {"class": "btn btn-outline-dark btn-sm me-md-1", "type": "button", "href": paper[key], "target": "_blank"});
       } else {
         return;
       }
