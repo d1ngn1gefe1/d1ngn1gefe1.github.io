@@ -41,6 +41,40 @@ const papers = [
   },
 
   {
+    "title": "Harnessing the Power of Smart and Connected Health to Tackle COVID-19: IoT, AI, Robotics, and Blockchain for a Better World",
+    "authors": ["Farshad Firouzi", "Bahar Farahani", "Mahmoud Daneshmand", "Kathy Grise", "Jae Seung Song",
+      "Roberto Saracco", "Lucy Lu Wang", "Kyle Lo", "Plamen Angelov", "Eduardo Soares", "Po-Shen Loh",
+      "Zeynab Talebpour", "Reza Moradi", "Mohsen Goodarzi", "Haleh Ashraf", "Mohammad Talebpour", "Alireza Talebpour",
+      "Luca Romeo", "Rupam Das", "Hadi Heidari", "Dana Pasquale", "James Moody", "Chris Woods", "Erich S Huang",
+      "Payam Barnaghi", "Majid Sarrafzadeh", "Ron Li", "Kristen L Beck", "Olexandr Isayev", "Nakmyoung Sung",
+      "Alan Luo"],
+    "venue": "IEEE Internet of Things Journal (IoT-J) 2021",
+    "thumbnail": "publications/luo2021scalable.png",
+    "areas": ["Healthcare: Ambient Intelligence in Healthcare"],
+    "abstract": "As COVID-19 hounds the world, the common cause of finding a swift solution to manage the pandemic " +
+      "has brought together researchers, institutions, governments, and society at large. The Internet of Things " +
+      "(IoT), Artificial Intelligence (AI) — including Machine Learning (ML) and Big Data analytics — as well as " +
+      "Robotics and Blockchain, are the four decisive areas of technological innovation that have been ingenuity " +
+      "harnessed to fight this pandemic and future ones. While these highly interrelated smart and connected health " +
+      "technologies cannot resolve the pandemic overnight and may not be the only answer to the crisis, they can " +
+      "provide greater insight into the disease and support frontline efforts to prevent and control the pandemic. " +
+      "This paper provides a blend of discussions on the contribution of these digital technologies, propose several " +
+      "complementary and multidisciplinary techniques to combat COVID-19, offer opportunities for more holistic " +
+      "studies, and accelerate knowledge acquisition and scientific discoveries in pandemic research. First, four " +
+      "areas where IoT can contribute are discussed, namely, i) tracking and tracing, ii) Remote Patient Monitoring " +
+      "(RPM) by Wearable IoT (WIoT), iii) Personal Digital Twins (PDT), and iv) real-life use case: ICT/IoT solution " +
+      "in Korea. Second, the role and novel applications of AI are explained, namely: i) diagnosis and prognosis, " +
+      "ii) risk prediction, iii) vaccine and drug development, iv) research dataset, v) early warnings and alerts, " +
+      "vi) social control and fake news detection, and vii) communication and chatbot. Third, the main uses of " +
+      "robotics and drone technology are analyzed, including i) crowd surveillance, ii) public announcements, iii) " +
+      "screening and diagnosis, and iv) essential supply delivery. Finally, we discuss how Distributed Ledger " +
+      "Technologies (DLTs), of which blockchain is a common example, can be combined with other technologies for " +
+      "tackling COVID-19.",
+    "manuscript": "https://eprints.lancs.ac.uk/id/eprint/153515/3/FINAL_VERSION.pdf",
+    "website": "https://ieeexplore.ieee.org/abstract/document/9406879"
+  },
+
+  {
     "title": "Ethical Issues in Using Ambient Intelligence in Health-Care Settings",
     "authors": ["Nicole Martinez-Martin", "Zelun Luo", "Amit Kaushal", "Ehsan Adeli", "Albert Haque", "Sara S. Kelly",
       "Sarah Wieten", "Mildred K Cho", "David Magnus", "Li Fei-Fei", "Kevin Schulman", "Arnold Milstein"],
@@ -272,7 +306,7 @@ const papers = [
     "title": "Towards Quantitative Automated Histopathology of Breast Cancer using Spatial Light Interference Microscopy (SLIM)",
     "authors": ["Hassaan Majeed", "Tan H. Nguyen", "Mikhail E. Kandel", "Kevin Han", "Zelun Luo", "Virgilia Macias",
       "Krishnarao Tangella", "Andre Balla", "Minh N. Do", "Gabriel Popescu"],
-    "venue": "United States and Canadian Academy of Pathology (USCAP), Seattle, WA, March 12-18, 2016",
+    "venue": "United States and Canadian Academy of Pathology (USCAP) Annual Meeting, Seattle, WA, March 12-18, 2016",
     "thumbnail": "publications/majeed2016towards.png",
     "areas": ["Healthcare: Diagnostic Imaging"],
     "abstract": "",
@@ -283,7 +317,7 @@ const papers = [
     "title": "Vision-Based Hand Hygiene Monitoring in Hospitals",
     "authors": ["Serena Yeung", "Alexandre Alahi", "Zelun Luo", "Boya Peng", "Albert Haque", "Amit Singh",
       "Terry Platchek", "Arnold Milstein", "Li Fei-Fei"],
-    "venue": ["American Medical Informatics Association (AMIA), Chicago, November 12-16, 2016",
+    "venue": ["American Medical Informatics Association (AMIA) Annual Symposium, Chicago, November 12-16, 2016",
       "NIPS Workshop on Machine Learning for Healthcare, 2015"],
     "thumbnail": "publications/yeung2015vision.png",
     "areas": ["Healthcare: Ambient Intelligence in Healthcare", "Activity Recognition"],
