@@ -49,7 +49,7 @@ const papers = [
       "Payam Barnaghi", "Majid Sarrafzadeh", "Ron Li", "Kristen L Beck", "Olexandr Isayev", "Nakmyoung Sung",
       "Alan Luo"],
     "venue": "IEEE Internet of Things Journal (IoT-J) 2021",
-    "thumbnail": "publications/luo2021scalable.png",
+    "thumbnail": "publications/firouzi2021Harnessing.png",
     "areas": ["Healthcare: Ambient Intelligence in Healthcare"],
     "abstract": "As COVID-19 hounds the world, the common cause of finding a swift solution to manage the pandemic " +
       "has brought together researchers, institutions, governments, and society at large. The Internet of Things " +
@@ -511,7 +511,7 @@ $(document).ready(function() {
 
   // add papers
   $.each(papers, function(paper_index, paper) {
-    let authors = paper.authors.join(", ").replaceAll("Zelun Luo", '<strong>$&</strong>');
+    let authors = paper.authors.join(", ").replaceAll("Zelun Luo", '<strong>$&</strong>').replaceAll("Alan Luo", '<strong>$&</strong>');
     let venue = $.isArray(paper.venue) ? paper.venue.join("<br>") : paper.venue;
 
     let links = $("<div/>", {"class": "btn-group btn-group-sm d-grid gap-2 col-6 mx-auto d-sm-block col-sm-12", "role": "group", "aria-label": "links"});
