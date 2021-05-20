@@ -36,7 +36,7 @@ $(document).ready(function() {
       $.map(articles, function(article, article_index) {
         return $("<div/>", {"class": "col-6 col-sm-4 col-md-2"}).append(
           $("<a/>", {"class": "d-flex h-100 align-items-center", "href": article.link, "target": "_blank"}).append(
-            $("<img/>", {"class": "img-fluid", "src": article.logo})
+            $("<img/>", {"class": "img-fluid zoom", "src": article.logo})
           )
         );
       })

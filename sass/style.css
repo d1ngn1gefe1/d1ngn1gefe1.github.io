@@ -22,22 +22,22 @@ body {
   color: lightskyblue;
 }
 
-#about #articles img {
-  -webkit-transform: scale(0.8);
-  transform: scale(0.8);
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-}
-#about #articles img:hover {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
 #publications .badge {
   font-size: 0.6rem;
 }
 #publications .btn-sm {
   font-size: 0.75rem;
+}
+
+img.zoom {
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+img.zoom:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 h1.section-title {
