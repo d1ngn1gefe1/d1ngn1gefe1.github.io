@@ -16,7 +16,8 @@ const schools = [
   {
     "name": "University of Illinois Urbana-Champaign",
     "degree": "Bachelor of Science",
-    "major": "Electrical and Computer Engineering",
+    "major": "Computer Engineering",
+    "minor": "Mathematics",
     "thumbnail": "about/uiuc_seal.png"
   },
 ];
@@ -33,8 +34,15 @@ $(document).ready(function() {
           "<br>",
           $("<small/>").append(
             school.degree,
-            "<br>",
-            school.major
+            "<br>"
+          ).append(
+            function() {
+              if (school.minor) {
+                return "Major in "+school.major+"<br>Minor in "+school.minor;
+              } else {
+                return school.major;
+              }
+            }
           )
         )
       )

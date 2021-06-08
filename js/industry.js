@@ -2,7 +2,7 @@ const companies = [
   {
     "name": "Nvidia Machine Learning",
     "position": "Research Intern",
-    "time": "Summer 2021 (upcoming)",
+    "time": "Summer 2021",
     "thumbnail": "about/nvidia.png"
   },
 
