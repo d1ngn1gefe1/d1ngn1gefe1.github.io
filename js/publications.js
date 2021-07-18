@@ -37,7 +37,8 @@ const papers = [
       "visual recognition tasks. We also propose a novel transfer Annotation-Efficient Learning that finetunes a very sparse " +
       "subnetwork with DP, inspired by this argument. We conduct extensive experiments and ablation studies on two " +
       "visual recognition tasks: CIFAR-100 -> CIFAR-10 (standard DP setting) and the CD-FSL challenge (few-shot, " +
-      "multiple levels of domain shifts) and demonstrate competitive experimental performance."
+      "multiple levels of domain shifts) and demonstrate competitive experimental performance.",
+    "manuscript": "https://openaccess.thecvf.com/content/CVPR2021/papers/Luo_Scalable_Differential_Privacy_With_Sparse_Network_Finetuning_CVPR_2021_paper.pdf",
   },
 
   {
