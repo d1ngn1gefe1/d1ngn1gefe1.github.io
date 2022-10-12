@@ -4,7 +4,7 @@ const papers = [
   "authors": ["Zelun Luo", "Zane Durante*", "Linden Li*", "Yiyun Liang", "Wanze Xie", "Ruochen Liu", "Emily Jin",
     "Zhuoyi Huang", "Lun Yu Li", "Jiajun Wu", "Juan Carlos Niebles", "Ehsan Adeli", "Li Fei-Fei"],
   "venue": "Conference on Neural Information Processing Systems (NeurIPS) 2022 <br>Track on Datasets and Benchmarks",
-  "thumbnail": "publications/luo2022neurips.gif",
+  "thumbnail": "publications/luo2022moma.gif",
   "areas": ["Trustworthy AI: Explainability", "Activity Recognition"],
   "abstract": "Video-language models (VLMs), large models pre-trained on numerous but noisy video-text pairs from " +
     "the internet, have revolutionized activity recognition through their remarkable generalization and " +
@@ -22,7 +22,7 @@ const papers = [
     "language and graphical models. We demonstrate a strong performance on activity parsing and few-shot video " +
     "classification, and our framework is intended to foster future research in the joint modeling of videos, " +
     "graphs, and language.",
-    "manuscript": "publications/luo2022neurips.pdf",
+    "manuscript": "publications/luo2022moma.pdf",
     "website": "https://moma.stanford.edu/",
     "toolkit": "https://github.com/StanfordVL/moma/",
     "documentation": "https://momaapi.readthedocs.io/"
