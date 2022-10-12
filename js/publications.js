@@ -23,7 +23,7 @@ const papers = [
     "classification, and our framework is intended to foster future research in the joint modeling of videos, " +
     "graphs, and language.",
     "manuscript": "publications/luo2022neurips.pdf",
-    "website": "https://ieeexplore.ieee.org/abstract/document/9406879",
+    "website": "https://moma.stanford.edu/",
     "toolkit": "https://github.com/StanfordVL/moma/",
     "documentation": "https://momaapi.readthedocs.io/"
   },
