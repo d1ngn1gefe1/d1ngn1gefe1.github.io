@@ -1,9 +1,37 @@
 const papers = [
   {
+  "title": "MOMA-LRG: Language-Refined Graphs for Multi-Object Multi-Actor Activity Parsing",
+  "authors": ["Zelun Luo", "Zane Durante*", "Linden Li*", "Yiyun Liang", "Wanze Xie", "Ruochen Liu", "Emily Jin",
+    "Zhuoyi Huang", "Lun Yu Li", "Jiajun Wu", "Juan Carlos Niebles", "Ehsan Adeli", "Li Fei-Fei"],
+  "venue": "Conference on Neural Information Processing Systems (NeurIPS) 2022 <br>Track on Datasets and Benchmarks",
+  "thumbnail": "publications/luo2022neurips.gif",
+  "areas": ["Trustworthy AI: Explainability", "Activity Recognition"],
+  "abstract": "Video-language models (VLMs), large models pre-trained on numerous but noisy video-text pairs from " +
+    "the internet, have revolutionized activity recognition through their remarkable generalization and " +
+    "open-vocabulary capabilities. While complex human activities are often hierarchical and compositional, most " +
+    "existing tasks for evaluating VLMs focus only on high-level video understanding, making it difficult to " +
+    "accurately assess and interpret the ability of VLMs to understand complex and fine-grained human activities. " +
+    "Inspired by the recently proposed MOMA framework, we define activity graphs as a single universal " +
+    "representation of human activities that encompasses video understanding at the activity, sub- activity, and " +
+    "atomic action level. We redefine activity parsing as the overarching task of activity graph generation, " +
+    "requiring understanding human activities across all three levels. To facilitate the evaluation of models on " +
+    "activity parsing, we introduce MOMA-LRG (Multi-Object Multi-Actor Language-Refined Graphs), a large dataset of " +
+    "complex human activities with activity graph annotations that can be readily transformed into natural language " +
+    "sentences. Lastly, we present a model-agnostic and lightweight approach to adapting and evaluating VLMs by " +
+    "incorporating structured knowledge from activity graphs into VLMs, addressing the individual limitations of " +
+    "language and graphical models. We demonstrate a strong performance on activity parsing and few-shot video " +
+    "classification, and our framework is intended to foster future research in the joint modeling of videos, " +
+    "graphs, and language.",
+    "manuscript": "publications/luo2022neurips.pdf",
+    "website": "https://ieeexplore.ieee.org/abstract/document/9406879",
+    "toolkit": "https://github.com/StanfordVL/moma/",
+    "documentation": "https://momaapi.readthedocs.io/"
+  },
+  {
     "title": "MOMA: Multi-Object Multi-Actor Activity Parsing",
     "authors": ["Zelun Luo*", "Wanze Xie*", "Siddharth Kapoor", "Yiyun Liang", "Michael Cooper", "Juan Carlos Niebles",
       "Ehsan Adeli", "Li Fei-Fei"],
-    "venue": "In Submission",
+    "venue": "Conference on Neural Information Processing Systems (NeurIPS) 2021",
     "thumbnail": "publications/luo2021moma.png",
     "areas": ["Trustworthy AI: Explainability", "Activity Recognition"],
     "abstract": "Complex activities often involve multiple humans utilizing a variety of objects to complete actions " +
@@ -18,7 +46,9 @@ const papers = [
       "action graphs, do not appropriately represent the dynamics between the entities. Hence, we further propose " +
       "\"Action Hypergraphs\" as a new representation, which includes hyperedges, edges defining higher-order " +
       "relationships. To \"parse\" the actions, we propose a novel HyperGraph Activity Parsing (HGAP) network, which " +
-      "outperforms several baseline methods, including those based on regular graphs or solely based on RGB data."
+      "outperforms several baseline methods, including those based on regular graphs or solely based on RGB data.",
+    "manuscript": "https://proceedings.neurips.cc/paper/2021/file/95688ba636a4720a85b3634acfec8cdd-Paper.pdf",
+    "website": "https://moma.stanford.edu/",
   },
 
   {
@@ -442,7 +472,9 @@ const resource_icons = {
   "Abstract": "fas fa-list",
   "Manuscript": "far fa-clipboard",
   "Poster": "far fa-image",
-  "Website": "fas fa-globe-americas"
+  "Website": "fas fa-globe-americas",
+  "Toolkit": "fa-solid fa-toolbox",
+  "Documentation": "fa-solid fa-book"
 };
 
 // areas -> subareas
