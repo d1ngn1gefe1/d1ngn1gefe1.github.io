@@ -1,7 +1,7 @@
 const papers = [
   {
   "title": "MOMA-LRG: Language-Refined Graphs for Multi-Object Multi-Actor Activity Parsing",
-  "authors": ["Zelun Luo", "Zane Durante*", "Linden Li*", "Yiyun Liang", "Wanze Xie", "Ruochen Liu", "Emily Jin",
+  "authors": ["Zelun Luo", "Zane Durante*", "Linden Li*", "Wanze Xie", "Ruochen Liu", "Emily Jin",
     "Zhuoyi Huang", "Lun Yu Li", "Jiajun Wu", "Juan Carlos Niebles", "Ehsan Adeli", "Li Fei-Fei"],
   "venue": "Conference on Neural Information Processing Systems (NeurIPS) 2022 <br>Track on Datasets and Benchmarks",
   "thumbnail": "publications/luo2022moma.gif",
